@@ -1,8 +1,5 @@
 from country import Country
 
-
-from country import Country
-
 class World:
     def __init__(self):
         
@@ -17,10 +14,13 @@ class World:
 
         countries = {}
 
+        self.country_list = []
+
         for continent in continents :
             for country in continent :
 
                 countries[country] = Country(country)
+                self.country_list.append(countries[country])
         
 
         # North America
@@ -67,19 +67,23 @@ class World:
         countries["Middle East"].add_neighbours([countries["India"], countries["Afganistan"], countries["Egypt"], countries["East Africa"], countries["Southern Europe"], countries["Ukraine"]])
         countries["India"].add_neighbours([countries["Middle East"], countries["Afganistan"], countries["China"], countries["Siam"]])
         countries["Siam"].add_neighbours([countries["China"], countries["India"], countries["Indoneasia"]])
-        countries["Afganistan"].add_neighbours([countries["AlbeUkrainerta"], countries["Ural"], countries["China"], countries["India"], countries["Middle East"]])
+        countries["Afganistan"].add_neighbours([countries["Ukraine"], countries["Ural"], countries["China"], countries["India"], countries["Middle East"]])
 
         # Africa
         countries["Congo"].add_neighbours([countries["North Africa"], countries["East Africa"], countries["South Africa"]])
-        countries["East Africa"].add_neighbours([countries["Egypt"], countries["North Africa"], countries["Congo"], countries["South Africa"], countries["Madagascar"]])
+        countries["East Africa"].add_neighbours([countries["Egypt"], countries["North Africa"], countries["Congo"], countries["South Africa"], countries["Madagascar"], countries["Middle East"]])
         countries["Egypt"].add_neighbours([countries["North Africa"], countries["East Africa"], countries["Southern Europe"], countries["Middle East"]])
         countries["Madagascar"].add_neighbours([countries["South Africa"], countries["East Africa"]])
         countries["North Africa"].add_neighbours([countries["Egypt"], countries["East Africa"], countries["Congo"], countries["Brazil"], countries["Western Europe"]])
         countries["South Africa"].add_neighbours([countries["Congo"], countries["East Africa"], countries["Madagascar"]])
 
-        #for country in countries["Alaska"].neighbours:
-        #    print(country.name)
+
+        #countries["South Africa"].owner = "player 1"
+
+        #for country in countries["Congo"].neighbours:
+            #if country.name == "South Africa":
+                #country.owner = "player 2"
 
 
+        #print(countries["South Africa"].owner)
 
-world = World()
