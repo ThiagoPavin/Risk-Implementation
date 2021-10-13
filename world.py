@@ -16,8 +16,8 @@ class World:
 
         self.country_list = []
 
-        for continent in continents :
-            for country in continent :
+        for continent in continents:
+            for country in continent:
 
                 countries[country] = Country(country)
                 self.country_list.append(countries[country])
@@ -76,14 +76,3 @@ class World:
         countries["Madagascar"].add_neighbours([countries["South Africa"], countries["East Africa"]])
         countries["North Africa"].add_neighbours([countries["Egypt"], countries["East Africa"], countries["Congo"], countries["Brazil"], countries["Western Europe"]])
         countries["South Africa"].add_neighbours([countries["Congo"], countries["East Africa"], countries["Madagascar"]])
-
-
-        #countries["South Africa"].owner = "player 1"
-
-        #for country in countries["Congo"].neighbours:
-            #if country.name == "South Africa":
-                #country.owner = "player 2"
-
-
-        #print(countries["South Africa"].owner)
-

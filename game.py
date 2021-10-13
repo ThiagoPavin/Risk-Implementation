@@ -1,4 +1,3 @@
-
 from world import World
 from player import Player
 
@@ -16,8 +15,6 @@ class Game:
 
         random.shuffle(self.countries)
 
-        #print(len(self.countries))
-
         self.player_1.countries_owned = self.countries[0:14]
         self.player_2.countries_owned = self.countries[14:28]
 
@@ -34,11 +31,6 @@ class Game:
         for country in self.player_neutral.countries_owned:
             country.owner = self.player_neutral
             self.player_neutral.set_new_troops(country,1)
-
-        #print(len(countries_p1))
-        #print(len(countries_p2))
-        #print(len(countries_neutral))
-
         
         for country in self.countries:
             print(country.name)
@@ -50,7 +42,5 @@ class Game:
             
             print(len(country.troops))
 
-Game()
-
-
-    
+if __name__ == '__main__':
+    Game()  
