@@ -4,7 +4,7 @@ class Country:
         self.name = name
         self.neighbours = []
         self.owner = None
-        self.troops = []
+        self.n_troops = 0
 
     def add_neighbours(self, countries):
         for country in countries:

@@ -40,7 +40,7 @@ class Game:
             else:
                 print("Neutral")
             
-            print(len(country.troops))
+            print(country.n_troops)
 
 if __name__ == '__main__':
     Game()  

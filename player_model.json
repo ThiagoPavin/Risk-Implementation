@@ -1,0 +1,17 @@
+{
+    "id": "number",
+    "countries_owned": ["name", "name"],
+    "n_troops": "number",
+    "n_new_troops": "number",
+    "state": "choosing_attack || mobilizing_attack || fortifying || mobilizing || watching",
+    "countries_conections": {
+        "country_1": {
+            "country_1": 1,
+            "country_2": 0
+        },
+        "country_2": {
+            "country_1": 0,
+            "country_2": 1
+        }
+    }
+}
