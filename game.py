@@ -32,15 +32,40 @@ class Game:
             country.owner = self.player_neutral
             self.player_neutral.set_new_troops(country,1)
         
-        for country in self.countries:
-            print(country.name)
+        #for country in self.countries:
+            #print(country.name)
 
-            if(country.owner != None):
-                print("player =", country.owner.id)
-            else:
-                print("Neutral")
+            #if(country.owner != None):
+                #print("player =", country.owner.id)
+            #else:
+                #print("Neutral")
             
-            print(country.n_troops)
+            #print(country.n_troops)
 
 if __name__ == '__main__':
-    Game()  
+    game = Game()
+
+    game.player_1.countries_owned[0].n_troops = 3
+
+    attacked_country = None
+
+    for country in game.player_1.countries_owned[0].neighbours:
+        if country not in game.player_1.countries_owned:
+            attacked_country = country
+            attacked_country.n_troops = 3
+            break
+
+    
+    if attacked_country != None:
+        print("Attacker troops = ", game.player_1.countries_owned[0].n_troops)
+
+        print("Attacked troops = ", attacked_country.n_troops)
+
+        game.player_1.attack(3, game.player_2.countries_owned[0], game.player_1.countries_owned[0])
+
+        print("Attacker troops = ", game.player_1.countries_owned[0].n_troops)
+
+        print("Attacked troops = ", attacked_country.n_troops)
+    
+    else:
+        print("Nao tem vizinhos inimigos")
