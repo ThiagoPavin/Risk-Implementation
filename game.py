@@ -1,5 +1,6 @@
 from world import World
 from player import Player
+import json
 
 import random
 
@@ -15,10 +16,8 @@ class Game:
 
         random.shuffle(self.countries)
 
-        self.player_1.countries_owned = self.countries[0:14]
-        self.player_2.countries_owned = self.countries[14:28]
-
-        self.player_neutral.countries_owned = self.countries[28:42]
+        self.player_1.countries_owned = self.countries[0:21]
+        self.player_2.countries_owned = self.countries[21:42]
 
         for country in self.player_1.countries_owned:
             country.owner = self.player_1
@@ -28,44 +27,36 @@ class Game:
             country.owner = self.player_2
             self.player_2.set_new_troops(country,1)
 
-        for country in self.player_neutral.countries_owned:
-            country.owner = self.player_neutral
-            self.player_neutral.set_new_troops(country,1)
-        
-        #for country in self.countries:
-            #print(country.name)
-
-            #if(country.owner != None):
-                #print("player =", country.owner.id)
-            #else:
-                #print("Neutral")
-            
-            #print(country.n_troops)
 
 if __name__ == '__main__':
     game = Game()
 
-    game.player_1.countries_owned[0].n_troops = 3
+    countries_data = {}
 
-    attacked_country = None
+    for country in game.countries:
+        countries_data[country.name] = {
+            "neighbours": [neighbour.name for neighbour in country.neighbours],
+            "owner": country.owner.id,
+            "n_troops": country.n_troops
+        }
 
-    for country in game.player_1.countries_owned[0].neighbours:
-        if country not in game.player_1.countries_owned:
-            attacked_country = country
-            attacked_country.n_troops = 3
-            break
+    p1_countries_owned_names = [country.name for country in game.player_1.countries_owned]
 
-    
-    if attacked_country != None:
-        print("Attacker troops = ", game.player_1.countries_owned[0].n_troops)
+    p1_data = {
+        "count": game.player_1.count,
+        "id": game.player_1.id,
+        "n_new_troops": game.player_1.n_new_troops,
+        "state": "mobilizing",
+        "countries_owned": p1_countries_owned_names,
+        "countries_conections": "working in progress",
+        "countries_data": countries_data
+    }
 
-        print("Attacked troops = ", attacked_country.n_troops)
+    p1_json = json.dumps(p1_data, indent = 4)
 
-        game.player_1.attack(3, game.player_2.countries_owned[0], game.player_1.countries_owned[0])
+    with open("player_1.json", "w") as outfile:
+        outfile.write(p1_json)
 
-        print("Attacker troops = ", game.player_1.countries_owned[0].n_troops)
-
-        print("Attacked troops = ", attacked_country.n_troops)
-    
-    else:
-        print("Nao tem vizinhos inimigos")
+    # with open("player_1_calls.json", "r") as openfile:
+    #     p1_calls = json.load(openfile)
+    #     # while(game.player_1.count < p1_calls)

@@ -18,7 +18,6 @@ class World:
 
         for continent in continents:
             for country in continent:
-
                 countries[country] = Country(country)
                 self.country_list.append(countries[country])
         
