@@ -4,6 +4,12 @@ import json
 
 import random
 
+from onMyWatch import OnMyWatch
+
+import os
+
+import threading
+
 class Game:
     def __init__(self):
 
@@ -28,7 +34,8 @@ class Game:
             self.player_2.set_new_troops(country,1)
 
 
-if __name__ == '__main__':
+def game_function(name):
+    print("Thread %s: starting", name)
     game = Game()
 
     countries_data = {}
@@ -54,8 +61,25 @@ if __name__ == '__main__':
 
     p1_json = json.dumps(p1_data, indent = 4)
 
-    with open("player_1.json", "w") as outfile:
+    with open("Logs\player_1.json", "w") as outfile:
         outfile.write(p1_json)
+    
+    print("Thread %s: finishing", name)
+
+def whatch_function(name):
+    print("Thread %s: starting", name)
+    watch = OnMyWatch()
+    watch.run()
+    print("Thread %s: finishing", name)
+
+
+if __name__ == '__main__':
+    
+    x = threading.Thread(target=game_function, args=(1,))
+    x.start()
+
+    y = threading.Thread(target=whatch_function, args=(2,))
+    y.start()
 
     # with open("player_1_calls.json", "r") as openfile:
     #     p1_calls = json.load(openfile)

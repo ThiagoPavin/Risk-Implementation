@@ -1,0 +1,447 @@
+{
+    "count": 0,
+    "id": 1,
+    "n_new_troops": 19,
+    "state": "mobilizing",
+    "countries_owned": [
+        "Ural",
+        "Middle East",
+        "Greenland",
+        "Egypt",
+        "Alberta",
+        "Eastern Australia",
+        "Skandinavia",
+        "Northwest America",
+        "Argentina",
+        "Papua New Guinea",
+        "Northern Europe",
+        "Siam",
+        "Siberia",
+        "Yakutsk",
+        "Ontario",
+        "South Africa",
+        "Brazil",
+        "North Africa",
+        "Western Europe",
+        "Quebec",
+        "Irkutsk"
+    ],
+    "countries_conections": "working in progress",
+    "countries_data": {
+        "Ural": {
+            "neighbours": [
+                "Ukraine",
+                "Afganistan",
+                "China",
+                "Siberia"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Middle East": {
+            "neighbours": [
+                "India",
+                "Afganistan",
+                "Egypt",
+                "East Africa",
+                "Southern Europe",
+                "Ukraine"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Greenland": {
+            "neighbours": [
+                "Ontario",
+                "Quebec",
+                "Northwest America",
+                "Iceland"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Egypt": {
+            "neighbours": [
+                "North Africa",
+                "East Africa",
+                "Southern Europe",
+                "Middle East"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Alberta": {
+            "neighbours": [
+                "Alaska",
+                "Ontario",
+                "Northwest America",
+                "Western America"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Eastern Australia": {
+            "neighbours": [
+                "Papua New Guinea",
+                "Western Australia"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Skandinavia": {
+            "neighbours": [
+                "Iceland",
+                "Great Britain",
+                "Northern Europe",
+                "Ukraine"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Northwest America": {
+            "neighbours": [
+                "Alberta",
+                "Alaska",
+                "Ontario",
+                "Greenland"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Argentina": {
+            "neighbours": [
+                "Peru",
+                "Brazil"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Papua New Guinea": {
+            "neighbours": [
+                "Indoneasia",
+                "Eastern Australia",
+                "Western Australia"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Northern Europe": {
+            "neighbours": [
+                "Great Britain",
+                "Skandinavia",
+                "Ukraine",
+                "Western Europe",
+                "Southern Europe"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Siam": {
+            "neighbours": [
+                "China",
+                "India",
+                "Indoneasia"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Siberia": {
+            "neighbours": [
+                "Yakutsk",
+                "Irkutsk",
+                "Mongolia",
+                "China",
+                "Ural"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Yakutsk": {
+            "neighbours": [
+                "Siberia",
+                "Irkutsk",
+                "Kamchatka"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Ontario": {
+            "neighbours": [
+                "Alberta",
+                "Quebec",
+                "Northwest America",
+                "Eastern America",
+                "Greenland",
+                "Western America"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "South Africa": {
+            "neighbours": [
+                "Congo",
+                "East Africa",
+                "Madagascar"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Brazil": {
+            "neighbours": [
+                "Venezuela",
+                "Peru",
+                "Argentina",
+                "North Africa"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "North Africa": {
+            "neighbours": [
+                "Egypt",
+                "East Africa",
+                "Congo",
+                "Brazil",
+                "Western Europe"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Western Europe": {
+            "neighbours": [
+                "Great Britain",
+                "Northern Europe",
+                "Southern Europe"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Quebec": {
+            "neighbours": [
+                "Greenland",
+                "Ontario",
+                "Eastern America"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Irkutsk": {
+            "neighbours": [
+                "Siberia",
+                "Kamchatka",
+                "Yakutsk",
+                "Mongolia"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Southern Europe": {
+            "neighbours": [
+                "Ukraine",
+                "Middle East",
+                "Egypt",
+                "North Africa",
+                "Western Europe",
+                "Northern Europe"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Iceland": {
+            "neighbours": [
+                "Skandinavia",
+                "Great Britain",
+                "Greenland"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Venezuela": {
+            "neighbours": [
+                "Brazil",
+                "Peru",
+                "Central America"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Indoneasia": {
+            "neighbours": [
+                "Siam",
+                "Papua New Guinea",
+                "Western Australia"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Central America": {
+            "neighbours": [
+                "Eastern America",
+                "Eastern America",
+                "Venezuela"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "China": {
+            "neighbours": [
+                "Afganistan",
+                "Ural",
+                "Siberia",
+                "Mongolia",
+                "Siam",
+                "India"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Japan": {
+            "neighbours": [
+                "Kamchatka",
+                "Mongolia"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "East Africa": {
+            "neighbours": [
+                "Egypt",
+                "North Africa",
+                "Congo",
+                "South Africa",
+                "Madagascar",
+                "Middle East"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Peru": {
+            "neighbours": [
+                "Brazil",
+                "Venezuela",
+                "Argentina"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Great Britain": {
+            "neighbours": [
+                "Iceland",
+                "Skandinavia",
+                "Northern Europe",
+                "Western Europe"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Kamchatka": {
+            "neighbours": [
+                "Yakutsk",
+                "Irkutsk",
+                "Japan",
+                "Mongolia"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Mongolia": {
+            "neighbours": [
+                "China",
+                "Siberia",
+                "Irkutsk",
+                "Kamchatka",
+                "Japan"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Madagascar": {
+            "neighbours": [
+                "South Africa",
+                "East Africa"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Afganistan": {
+            "neighbours": [
+                "Ukraine",
+                "Ural",
+                "China",
+                "India",
+                "Middle East"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Alaska": {
+            "neighbours": [
+                "Northwest America",
+                "Alberta",
+                "Kamchatka"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Congo": {
+            "neighbours": [
+                "North Africa",
+                "East Africa",
+                "South Africa"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Ukraine": {
+            "neighbours": [
+                "Skandinavia",
+                "Northern Europe",
+                "Southern Europe",
+                "Middle East",
+                "Ural",
+                "Afganistan"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Eastern America": {
+            "neighbours": [
+                "Ontario",
+                "Quebec",
+                "Central America",
+                "Western America"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Western Australia": {
+            "neighbours": [
+                "Eastern Australia",
+                "Indoneasia",
+                "Papua New Guinea"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Western America": {
+            "neighbours": [
+                "Alberta",
+                "Ontario",
+                "Central America",
+                "Eastern America"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "India": {
+            "neighbours": [
+                "Middle East",
+                "Afganistan",
+                "China",
+                "Siam"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        }
+    }
+}
