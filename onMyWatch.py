@@ -21,8 +21,7 @@ class OnMyWatch:
             print("Observer Stopped")
   
         self.observer.join()
-  
-  
+
 class Handler(FileSystemEventHandler):
   
     @staticmethod
@@ -36,4 +35,3 @@ class Handler(FileSystemEventHandler):
         elif event.event_type == 'modified':
             # Event is modified, you can process it now
             print("Watchdog received modified event - % s." % event.src_path)
-              

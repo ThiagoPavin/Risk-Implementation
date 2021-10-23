@@ -33,7 +33,6 @@ class Game:
             country.owner = self.player_2
             self.player_2.set_new_troops(country,1)
 
-
 def game_function(name):
     print("Thread %s: starting", name)
     game = Game()
@@ -66,6 +65,7 @@ def game_function(name):
     
     print("Thread %s: finishing", name)
 
+
 def whatch_function(name):
     print("Thread %s: starting", name)
     watch = OnMyWatch()
@@ -80,6 +80,21 @@ if __name__ == '__main__':
 
     y = threading.Thread(target=whatch_function, args=(2,))
     y.start()
+
+    """
+    def plays()
+
+    while
+        if p1_commands_created:
+            break
+
+    i = 0
+    while i < 10
+        if p1_commands_modified:
+            plays()
+            i += 1
+    
+    """ 
 
     # with open("player_1_calls.json", "r") as openfile:
     #     p1_calls = json.load(openfile)

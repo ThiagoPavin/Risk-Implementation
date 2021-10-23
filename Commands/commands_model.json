@@ -1,0 +1,7 @@
+{
+    "id": "number",
+    "command": {
+        "name": "attack || move_troops || set_new_troops || pass_turn",
+        "args": ["country_name", "n_troops"]
+    }
+}
