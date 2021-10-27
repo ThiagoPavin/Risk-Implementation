@@ -1,0 +1,18 @@
+{
+    "id": "number",
+    "command_1": {
+        "name": "attack",
+        "args": ["n_dice", "attacker", "attacked"]
+    },
+    "command_2": {
+        "name": "move_troops",
+        "args": ["n_troops", "from_country", "to_country"]
+    },
+    "command_3": {
+        "name": "set_new_troops",
+        "args": ["n_troops", "country_name"]
+    },
+    "command_4": {
+        "name": "pass_turn"
+    }
+}

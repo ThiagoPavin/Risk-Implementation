@@ -39,7 +39,17 @@ class Player:
                                 #print("attacker ganhou")
 
                             if i == len(attacked_dice_values) - 1:
-                                break 
+                                break
+
+                        if attacked.n_troops == 0:
+                            attacked.owner = attacker.owner
+                            attacked.n_troops += n_dice
+                            attacker.n_troops -= n_dice
+
+                            return True
+
+                        return False
+
                     else:
                         print("Player", self.id, "doesn't have enough troops on", attacker.name, "to attack")
                 else:
@@ -63,7 +73,7 @@ class Player:
         else:
             print("Player", self.id, "is trying to move troops from enemy's country (", from_country.name, ")")
 
-    def set_new_troops(self, country : Country, n_troops : int):
+    def set_new_troops(self, n_troops : int, country : Country):
         if(country.owner == self):
             if(n_troops <= self.n_new_troops):
                 country.n_troops += n_troops
