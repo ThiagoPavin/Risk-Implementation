@@ -1,7 +1,3 @@
 {
-    "id": 1,
-    "command": {
-        "name": "pass_turn",
-        "args": [7, "India", "Middle East"]
-    }
+    "id": 1
 }

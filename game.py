@@ -1,10 +1,10 @@
 from world import World
 from player import Player
+
 import json
-
 import random
-
 import os
+import time
 
 class Game:
     def __init__(self):
@@ -102,30 +102,30 @@ class Game:
         with open("Logs\player_2.json", "w") as outfile:
             outfile.write(p2_json)
 
-
-
     def wait_for_agent(self, id):
 
         path = "Calls\player_" + str(id) + ".json"
 
         if id == 1:
-            time = os.path.getmtime(path)
+            current_time = os.path.getmtime(path)
 
-            while self.last_m_time_p1 == time:
-                time = os.path.getmtime(path)
+            while self.last_m_time_p1 == current_time:
+                current_time = os.path.getmtime(path)
 
-            # print("last time:", self.last_m_time_p1)
-            # print("time:", time)
+            time.sleep(0.000000001)
 
-            self.last_m_time_p1 = time
+            self.last_m_time_p1 = current_time
 
         elif id == 2:
-            time = os.path.getmtime(path)
+            current_time = os.path.getmtime(path)
 
-            while self.last_m_time_p2 == time:
-                time = os.path.getmtime(path)
+            while self.last_m_time_p2 == current_time:
+                current_time = os.path.getmtime(path)
 
-            self.last_m_time_p2 = time
+            #TODO needs fix
+            time.sleep(0.000000001)
+
+            self.last_m_time_p2 = current_time
 
     def execute_player_action(self, id):
         #path = "Calls\player_1.json"
@@ -148,8 +148,7 @@ class Game:
 
                     break
             except:
-                print("Oh, deu erro aqui")
-
+                print("Oh, deu erro aqui") 
                 
         if json_object["command"]["name"] == "attack":
             attacker = None
@@ -228,12 +227,20 @@ if __name__ == '__main__':
     game.update_players_data()
     print("atualizou os dados dos player")
 
+    count = 0
+
     while True:
         print("Esperando acao do player 1...")
         game.wait_for_agent(1)
 
-        game.execute_player_action(1)
-        print("Acao executada")
+        #game.execute_player_action(1)
+
+        print(count)
+
+        # game.execute_player_action(1)
+        # print("Acao executada")
         
-        game.update_players_data()
-        print("atualizou os dados dos player")
+        # game.update_players_data()
+        # print("atualizou os dados dos player")
+
+        count += 1
