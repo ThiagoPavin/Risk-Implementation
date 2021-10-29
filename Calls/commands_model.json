@@ -1,5 +1,6 @@
 {
     "id": "number",
+    "count": "count",
     "command_1": {
         "name": "attack",
         "args": ["n_dice", "attacker", "attacked"]
@@ -14,5 +15,14 @@
     },
     "command_4": {
         "name": "pass_turn"
+    }
+}
+
+{
+    "id": 1,
+    "count": 1,
+    "command": {
+        "name": "set_new_troops",
+        "args": [8, "Yakutsk"]
     }
 }

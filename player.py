@@ -42,10 +42,6 @@ class Player:
                                 break
 
                         if attacked.n_troops == 0:
-                            attacked.owner = attacker.owner
-                            attacked.n_troops += n_dice
-                            attacker.n_troops -= n_dice
-
                             return True
 
                         return False

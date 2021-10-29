@@ -15,15 +15,20 @@ class Game:
 
     def create_command_files(self):
 
+        self.count_p1 = 0
+        self.count_p2 = 0
+
         p1_data = {
-            "id": 1
+            "id": 1,
+            "count": self.count_p1
         }
 
         p1_json = json.dumps(p1_data, indent = 4)
 
 
         p2_data = {
-            "id": 2
+            "id": 2,
+            "count": self.count_p2
         }
 
         p2_json = json.dumps(p2_data, indent = 4)
@@ -109,23 +114,54 @@ class Game:
         if id == 1:
             current_time = os.path.getmtime(path)
 
-            while self.last_m_time_p1 == current_time:
+            last_count = self.count_p1
+
+            while last_count == self.count_p1:
+                while self.last_m_time_p1 == current_time:
+                    current_time = os.path.getmtime(path)
+
+                while True:
+                    try:
+                        with open(path) as openfile:
+                            data = json.load(openfile)
+                            if data["count"] == self.count_p1:
+                                print("Atualizou sem precisar")
+                            self.count_p1 = data["count"]
+                            break
+                    except:
+                        print("Oh, deu erro aqui")
+
+
                 current_time = os.path.getmtime(path)
 
-            time.sleep(0.000000001)
-
-            self.last_m_time_p1 = current_time
+                self.last_m_time_p1 = current_time
 
         elif id == 2:
             current_time = os.path.getmtime(path)
 
-            while self.last_m_time_p2 == current_time:
+            last_count = self.count_p2
+
+            while last_count == self.count_p2:
+                while self.last_m_time_p2 == current_time:
+                    current_time = os.path.getmtime(path)
+
+                while True:
+                    try:
+                        with open(path) as openfile:
+                            data = json.load(openfile)
+                            if data["count"] == self.count_p2:
+                                print("Atualizou sem precisar")
+                            self.count_p2 = data["count"]
+                            break
+                    except:
+                        print("Oh, deu erro aqui")
+
+
                 current_time = os.path.getmtime(path)
 
-            #TODO needs fix
-            time.sleep(0.000000001)
+                self.last_m_time_p2 = current_time
 
-            self.last_m_time_p2 = current_time
+        
 
     def execute_player_action(self, id):
         #path = "Calls\player_1.json"
@@ -171,8 +207,11 @@ class Game:
             else:
                 has_won = player.attack(json_object["command"]["args"][0], attacker, attacked)
                 if has_won:
-                    #Set state to mobilizing_attack
-                    pass
+                    enemy.countries_owned.remove(attacked)
+                    player.countries_owned.append(attacked)
+                    attacked.owner = attacker.owner
+                    attacked.n_troops += json_object["command"]["args"][0]
+                    attacker.n_troops -= json_object["command"]["args"][0]
         
         elif json_object["command"]["name"] == "move_troops":
             from_country = None
@@ -233,14 +272,12 @@ if __name__ == '__main__':
         print("Esperando acao do player 1...")
         game.wait_for_agent(1)
 
-        #game.execute_player_action(1)
+        print(count+1)
 
-        print(count)
-
-        # game.execute_player_action(1)
-        # print("Acao executada")
+        game.execute_player_action(1)
+        print("Acao executada")
         
-        # game.update_players_data()
-        # print("atualizou os dados dos player")
+        game.update_players_data()
+        print("atualizou os dados dos player")
 
         count += 1
