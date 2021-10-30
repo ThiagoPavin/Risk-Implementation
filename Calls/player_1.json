@@ -1,8 +1,4 @@
 {
     "id": 1,
-    "count": 5,
-    "command": {
-        "name": "move_troops",
-        "args": [3, "Southern Europe", "Ukraine"]
-    }
+    "count": 0
 }

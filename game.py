@@ -13,6 +13,14 @@ class Game:
         self.player_1 = Player(1,40)
         self.player_2 = Player(2,40)
 
+        self.player_1.state = "mobilizing"
+        self.player_2.state = "waiting"
+
+        self.active_player = self.player_1
+
+        self.winner = None
+
+
     def create_command_files(self):
 
         self.count_p1 = 0
@@ -78,7 +86,7 @@ class Game:
             "count": self.player_1.count,
             "id": self.player_1.id,
             "n_new_troops": self.player_1.n_new_troops,
-            "state": "mobilizing",
+            "state": self.player_1.state,
             "countries_owned": p1_countries_owned_names,
             "countries_conections": "working in progress",
             "countries_data": countries_data
@@ -96,7 +104,7 @@ class Game:
             "count": self.player_2.count,
             "id": self.player_2.id,
             "n_new_troops": self.player_2.n_new_troops,
-            "state": "mobilizing",
+            "state": self.player_2.state,
             "countries_owned": p2_countries_owned_names,
             "countries_conections": "working in progress",
             "countries_data": countries_data
@@ -212,6 +220,10 @@ class Game:
                     attacked.owner = attacker.owner
                     attacked.n_troops += json_object["command"]["args"][0]
                     attacker.n_troops -= json_object["command"]["args"][0]
+                    player.state = "conquering"
+
+                    if len(player.countries_owned) == 42:
+                        self.winner = player
         
         elif json_object["command"]["name"] == "move_troops":
             from_country = None
@@ -234,6 +246,11 @@ class Game:
             else:
                 player.move_troops(json_object["command"]["args"][0], from_country, to_country)
 
+                if player.state == "conquering":
+                    player.state = "attacking"
+
+            
+
         elif json_object["command"]["name"] == "set_new_troops":
             country = None
 
@@ -246,10 +263,25 @@ class Game:
                 print("Player", id, "does not own any country named", json_object["command"]["args"][1])
             else:
                 player.set_new_troops(json_object["command"]["args"][0], country)
+
+
         
         elif json_object["command"]["name"] == "pass_turn":
-            print("Turn passed")
-        
+
+            if player.state == "mobilizing":
+                player.state = "attacking"
+
+            elif player.state == "attacking":
+                player.state = "fortifying"
+
+            elif player.state == "fortifying":
+                player.state = "waiting"
+                self.active_player = enemy
+                enemy.state = "mobilizing"
+
+            elif player.state == "conquering":
+                print("Player", id, "cannot pass_turn during a conquering state")
+
         else:
             print("Player", id, "is trying to use a command that does not exist (", json_object["command"]["name"], ")")
                 
@@ -266,18 +298,23 @@ if __name__ == '__main__':
     game.update_players_data()
     print("atualizou os dados dos player")
 
-    count = 0
-
     while True:
         print("Esperando acao do player 1...")
-        game.wait_for_agent(1)
+        game.wait_for_agent(game.active_player.id)
 
-        print(count+1)
-
-        game.execute_player_action(1)
+        game.execute_player_action(game.active_player.id)
         print("Acao executada")
-        
+
+        if game.winner != None:
+            print(game.winner.id, "win!")
+            
+            if game.winner.id == 1:
+                game.player_1.state = "winner"
+                game.player_2.state = "loser"
+
+            elif game.winner.id == 2:
+                game.player_1.state = "loser"
+                game.player_2.state = "winner"
+                
         game.update_players_data()
         print("atualizou os dados dos player")
-
-        count += 1

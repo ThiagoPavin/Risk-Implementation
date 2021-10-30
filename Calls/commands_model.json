@@ -17,12 +17,3 @@
         "name": "pass_turn"
     }
 }
-
-{
-    "id": 1,
-    "count": 1,
-    "command": {
-        "name": "set_new_troops",
-        "args": [8, "Yakutsk"]
-    }
-}
