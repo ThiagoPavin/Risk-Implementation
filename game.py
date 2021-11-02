@@ -4,7 +4,6 @@ from player import Player
 import json
 import random
 import os
-import time
 
 class Game:
     def __init__(self):
@@ -20,6 +19,10 @@ class Game:
 
         self.winner = None
 
+    def _distribute_new_troops(self, player: Player):
+        n_countries_owned = len(player.countries_owned)
+        n_new_troops = int(n_countries_owned // 3)
+        player.n_new_troops += n_new_troops
 
     def create_command_files(self):
 
@@ -51,7 +54,6 @@ class Game:
         
         self.last_m_time_p2 = os.path.getmtime("Calls\player_2.json")
 
-
     def random_draft(self):
 
         random.shuffle(self.world.country_list)
@@ -67,6 +69,15 @@ class Game:
             country.owner = self.player_2
             self.player_2.set_new_troops(1, country)
 
+        # Distribute troops randomly among countries owned
+        while self.player_1.n_new_troops > 0:
+            country = random.choice(self.player_1.countries_owned)
+            self.player_1.set_new_troops(random.randint(0, self.player_1.n_new_troops), country)
+        
+        while self.player_2.n_new_troops > 0:
+            country = random.choice(self.player_2.countries_owned)
+            self.player_2.set_new_troops(random.randint(0, self.player_2.n_new_troops), country)
+
 
     def update_players_data(self):
 
@@ -81,6 +92,8 @@ class Game:
 
         # P1
         p1_countries_owned_names = [country.name for country in self.player_1.countries_owned]
+
+        self.player_1.count += 1    
 
         p1_data = {
             "count": self.player_1.count,
@@ -99,6 +112,8 @@ class Game:
 
         # P2
         p2_countries_owned_names = [country.name for country in self.player_2.countries_owned]
+
+        self.player_2.count += 1
 
         p2_data = {
             "count": self.player_2.count,
@@ -168,8 +183,6 @@ class Game:
                 current_time = os.path.getmtime(path)
 
                 self.last_m_time_p2 = current_time
-
-        
 
     def execute_player_action(self, id):
         #path = "Calls\player_1.json"
@@ -279,11 +292,15 @@ class Game:
                 self.active_player = enemy
                 enemy.state = "mobilizing"
 
+                self._distribute_new_troops(self.active_player)
+
             elif player.state == "conquering":
                 print("Player", id, "cannot pass_turn during a conquering state")
 
         else:
             print("Player", id, "is trying to use a command that does not exist (", json_object["command"]["name"], ")")
+
+        print('Player:', id, 'count:', json_object['count'])
                 
 if __name__ == '__main__':
 
@@ -295,18 +312,20 @@ if __name__ == '__main__':
     game.random_draft()
     print("Distribuiu os paises")
 
+    game._distribute_new_troops(game.active_player)
+
     game.update_players_data()
-    print("atualizou os dados dos player")
+    print("Atualizou os dados dos player")
 
     while True:
-        print("Esperando acao do player 1...")
+        #print("Esperando acao do player", game.active_player.id, "...")
         game.wait_for_agent(game.active_player.id)
 
         game.execute_player_action(game.active_player.id)
-        print("Acao executada")
+        #print("Acao executada")
 
         if game.winner != None:
-            print(game.winner.id, "win!")
+            print('Player', game.winner.id, "win!")
             
             if game.winner.id == 1:
                 game.player_1.state = "winner"
@@ -317,4 +336,4 @@ if __name__ == '__main__':
                 game.player_2.state = "winner"
                 
         game.update_players_data()
-        print("atualizou os dados dos player")
+        #print("Atualizou os dados dos player")

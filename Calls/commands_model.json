@@ -1,6 +1,6 @@
 {
-    "id": "number",
-    "count": "count",
+    "id": 1,
+    "count": 0,
     "command_1": {
         "name": "attack",
         "args": ["n_dice", "attacker", "attacked"]
@@ -14,6 +14,7 @@
         "args": ["n_troops", "country_name"]
     },
     "command_4": {
-        "name": "pass_turn"
+        "name": "pass_turn",
+        "args": []
     }
 }

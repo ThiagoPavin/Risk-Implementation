@@ -1,8 +1,8 @@
 {
-    "id": "number",
+    "id": 1,
     "countries_owned": ["name", "name"],
-    "n_new_troops": "number",
-    "state": "choosing_attack || mobilizing_attack || fortifying || mobilizing || watching",
+    "n_new_troops": 0,
+    "state": "attacking || conquering || fortifying || mobilizing || waiting",
     "countries_conections": {
         "country_1": {
             "country_1": 1,
@@ -17,14 +17,14 @@
         "country_1": {
             "name": "name",
             "neighbours": ["name", "name"],
-            "owner": "name",
-            "n_troops": "number"
+            "owner": 1,
+            "n_troops": 1
         },
         "country_2": {
             "name": "name",
             "neighbours": ["name", "name"],
-            "owner": "name",
-            "n_troops": "number"
+            "owner": 2,
+            "n_troops": 1
         }
     }
 }
