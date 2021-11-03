@@ -15,6 +15,15 @@ class Game:
         self.player_1.state = "mobilizing"
         self.player_2.state = "waiting"
 
+        self.player_1.control.call_count = 0
+        self.player_2.control.call_count = 0
+        
+        self.player_1.control.call_path = "Calls\player_1.json"
+        self.player_2.control.call_path = "Calls\player_2.json"
+        
+        self.player_1.control.data_path = "Logs\player_1.json"
+        self.player_2.control.data_path = "Logs\player_2.json"
+
         self.active_player = self.player_1
 
         self.winner = None
@@ -24,35 +33,77 @@ class Game:
         n_new_troops = int(n_countries_owned // 3)
         player.n_new_troops += n_new_troops
 
+    def _create_call_data(self, id, count):
+        data = {
+            'id': id,
+            'count': count,
+            'command': {
+                'name': "",
+                'args': []
+            }  
+        }
+
+        json_data = json.dumps(data, indent = 4)
+        
+        return json_data
+
+    def _update_json_file(self, path, json_data):
+        with open(path, "w") as outfile:
+            outfile.write(json_data)
+
+    def _create_countries_data(self):
+        countries_data = {} 
+
+        for country in self.world.country_list:
+            countries_data[country.name] = {
+                "neighbours": [neighbour.name for neighbour in country.neighbours],
+                "owner": country.owner.id,
+                "n_troops": country.n_troops
+            }
+
+        return countries_data
+
+    def _create_player_data(self, countries_data, player):
+        countries_owned_names = [country.name for country in player.countries_owned]
+
+        border_countries = {}
+
+        for country in player.countries_owned:
+            for neighbour in country.neighbours:
+                if self.world.country_dict[neighbour.name].owner != player:
+                    if country.name not in border_countries:
+                        border_countries[country.name] = []
+                        border_countries[country.name].append(neighbour.name)
+                    else:
+                        border_countries[country.name].append(neighbour.name)
+
+        player.count += 1
+
+        data = {
+            "count": player.count,
+            "id": player.id,
+            "n_new_troops": player.n_new_troops,
+            "state": player.state,
+            "countries_owned": countries_owned_names,
+            "countries_conections": "working in progress",
+            "countries_data": countries_data,
+            "border_countries": border_countries
+        }
+
+        json_data = json.dumps(data, indent = 4)
+
+        return json_data
+
     def create_command_files(self):
 
-        self.count_p1 = 0
-        self.count_p2 = 0
+        p1_json_data = self._create_call_data(1, self.player_1.control.call_count)
+        p2_json_data = self._create_call_data(2, self.player_2.control.call_count)
 
-        p1_data = {
-            "id": 1,
-            "count": self.count_p1
-        }
-
-        p1_json = json.dumps(p1_data, indent = 4)
-
-
-        p2_data = {
-            "id": 2,
-            "count": self.count_p2
-        }
-
-        p2_json = json.dumps(p2_data, indent = 4)
-
-        with open("Calls\player_1.json", "w") as outfile:
-            outfile.write(p1_json)
-
-        self.last_m_time_p1 = os.path.getmtime("Calls\player_1.json")
-
-        with open("Calls\player_2.json", "w") as outfile:
-            outfile.write(p2_json)
+        self._update_json_file(self.player_1.control.call_path, p1_json_data)
+        self.last_m_time_p1 = os.path.getmtime(self.player_1.control.call_path)
         
-        self.last_m_time_p2 = os.path.getmtime("Calls\player_2.json")
+        self._update_json_file(self.player_2.control.call_path, p2_json_data)
+        self.last_m_time_p2 = os.path.getmtime(self.player_2.control.call_path)
 
     def random_draft(self):
 
@@ -78,116 +129,134 @@ class Game:
             country = random.choice(self.player_2.countries_owned)
             self.player_2.set_new_troops(random.randint(0, self.player_2.n_new_troops), country)
 
-
     def update_players_data(self):
 
-        countries_data = {} 
+        countries_data = self._create_countries_data()
 
-        for country in self.world.country_list:
-            countries_data[country.name] = {
-                "neighbours": [neighbour.name for neighbour in country.neighbours],
-                "owner": country.owner.id,
-                "n_troops": country.n_troops
-            }
+        p1_json_data = self._create_player_data(countries_data, self.player_1)
+        p2_json_data = self._create_player_data(countries_data, self.player_2)
 
-        # P1
-        p1_countries_owned_names = [country.name for country in self.player_1.countries_owned]
+        self._update_json_file(self.player_1.control.data_path, p1_json_data)
+        self._update_json_file(self.player_2.control.data_path, p2_json_data)
 
-        self.player_1.count += 1    
+    def wait_for_agent(self, player):
+        
+        current_time = os.path.getmtime(player.control.call_path)
 
-        p1_data = {
-            "count": self.player_1.count,
-            "id": self.player_1.id,
-            "n_new_troops": self.player_1.n_new_troops,
-            "state": self.player_1.state,
-            "countries_owned": p1_countries_owned_names,
-            "countries_conections": "working in progress",
-            "countries_data": countries_data
-        }
+        last_count = player.control.call_count
 
-        p1_json = json.dumps(p1_data, indent = 4)
+        while last_count == player.control.call_count:
+            while player.control.last_m_time == current_time:
+                current_time = os.path.getmtime(player.control.call_path)
 
-        with open("Logs\player_1.json", "w") as outfile:
-            outfile.write(p1_json)
+            while True:
+                try:
+                    with open(player.control.call_path) as openfile:
+                        data = json.load(openfile)
+                        if data["count"] == player.control.call_count:
+                            print("Atualizou sem precisar")
+                        else:
+                            player.control.last_call_data = player.control.call_data
+                            player.control.call_data = data
+                        player.control.call_count = data["count"]
+                        break
+                except:
+                    print("Oh, deu erro aqui")
 
-        # P2
-        p2_countries_owned_names = [country.name for country in self.player_2.countries_owned]
+            current_time = os.path.getmtime(player.control.call_path)
 
-        self.player_2.count += 1
+            player.control.last_m_time = current_time
 
-        p2_data = {
-            "count": self.player_2.count,
-            "id": self.player_2.id,
-            "n_new_troops": self.player_2.n_new_troops,
-            "state": self.player_2.state,
-            "countries_owned": p2_countries_owned_names,
-            "countries_conections": "working in progress",
-            "countries_data": countries_data
-        }
+    def _attack(self, player, enemy):
+        attacker = None
+        attacked = None
 
-        p2_json = json.dumps(p2_data, indent = 4)
+        for country_owned in player.countries_owned:
+            if country_owned.name == player.control.call_data["command"]["args"][1]:
+                attacker = country_owned
+                break
+        
+        for country_owned in enemy.countries_owned:
+            if country_owned.name == player.control.call_data["command"]["args"][2]:
+                attacked = country_owned
+                break
+        
+        if(attacker == None):
+            print("Player", id, "does not own any country named", player.control.call_data["command"]["args"][1])
+        elif(attacked == None):
+            print("Player", enemy.id, "does not own any country named", player.control.call_data["command"]["args"][2])
+        else:
+            has_won = player.attack(player.control.call_data["command"]["args"][0], attacker, attacked)
+            if has_won:
+                enemy.countries_owned.remove(attacked)
+                player.countries_owned.append(attacked)
+                attacked.owner = attacker.owner
+                attacked.n_troops += player.control.call_data["command"]["args"][0]
+                attacker.n_troops -= player.control.call_data["command"]["args"][0]
+                player.state = "conquering"
 
-        with open("Logs\player_2.json", "w") as outfile:
-            outfile.write(p2_json)
+                if len(player.countries_owned) == 42:
+                    self.winner = player
 
-    def wait_for_agent(self, id):
+    def _move_troops(self, player):
+        from_country = None
+        to_country = None
 
-        path = "Calls\player_" + str(id) + ".json"
+        if player.state == 'conquering':
+            if player.control.call_data['command']['args'][1] != player.control.last_call_data['command']['args'][1] or player.control.call_data['command']['args'][2] != player.control.last_call_data['command']['args'][2]:
+                print("Player", player.id, "can only move between", player.control.last_call_data['command']['args'][1], "and", player.control.last_call_data['command']['args'][2], "during a conquering")
+                return 
 
-        if id == 1:
-            current_time = os.path.getmtime(path)
+        for country_owned in player.countries_owned:
+            if country_owned.name == player.control.call_data["command"]["args"][1]:
+                from_country = country_owned
+                break
+        
+        for country_owned in player.countries_owned:
+            if country_owned.name == player.control.call_data["command"]["args"][2]:
+                to_country = country_owned
+                break
+        
+        if(from_country == None):
+            print("Player", id, "does not own any country named", player.control.call_data["command"]["args"][1])
+        elif(to_country == None):
+            print("Player", id, "does not own any country named", player.control.call_data["command"]["args"][2])
+        else:
+            player.move_troops(player.control.call_data["command"]["args"][0], from_country, to_country)
 
-            last_count = self.count_p1
+            if player.state == "conquering":
+                player.state = "attacking"
 
-            while last_count == self.count_p1:
-                while self.last_m_time_p1 == current_time:
-                    current_time = os.path.getmtime(path)
+    def _set_new_troops(self, player):
+        country = None
 
-                while True:
-                    try:
-                        with open(path) as openfile:
-                            data = json.load(openfile)
-                            if data["count"] == self.count_p1:
-                                print("Atualizou sem precisar")
-                            self.count_p1 = data["count"]
-                            break
-                    except:
-                        print("Oh, deu erro aqui")
+        for country_owned in player.countries_owned:
+            if country_owned.name == player.control.call_data["command"]["args"][1]:
+                country = country_owned
+                break
+        
+        if(country == None):
+            print("Player", id, "does not own any country named", player.control.call_data["command"]["args"][1])
+        else:
+            player.set_new_troops(player.control.call_data["command"]["args"][0], country)
 
+    def _pass_turn(self, player, enemy):        
+        if player.state == "mobilizing":
+            player.state = "attacking"
 
-                current_time = os.path.getmtime(path)
+        elif player.state == "attacking":
+            player.state = "fortifying"
 
-                self.last_m_time_p1 = current_time
+        elif player.state == "fortifying":
+            player.state = "waiting"
+            self.active_player = enemy
+            enemy.state = "mobilizing"
+            self._distribute_new_troops(self.active_player)
 
-        elif id == 2:
-            current_time = os.path.getmtime(path)
-
-            last_count = self.count_p2
-
-            while last_count == self.count_p2:
-                while self.last_m_time_p2 == current_time:
-                    current_time = os.path.getmtime(path)
-
-                while True:
-                    try:
-                        with open(path) as openfile:
-                            data = json.load(openfile)
-                            if data["count"] == self.count_p2:
-                                print("Atualizou sem precisar")
-                            self.count_p2 = data["count"]
-                            break
-                    except:
-                        print("Oh, deu erro aqui")
-
-
-                current_time = os.path.getmtime(path)
-
-                self.last_m_time_p2 = current_time
+        elif player.state == "conquering":
+            print("Player", id, "cannot pass_turn during a conquering state")
 
     def execute_player_action(self, id):
-        #path = "Calls\player_1.json"
-        path = "Calls\player_" + str(id) + ".json"    
-
         if id == 1:
             player = self.player_1
             enemy = self.player_2
@@ -195,112 +264,25 @@ class Game:
             player = self.player_2
             enemy = self.player_1
 
-        #TODO needs fix
-        while True:  
-            try:
-                with open(path) as openfile:
-                    json_object = json.load(openfile)
-                    
-                    print(json_object)
-
-                    break
-            except:
-                print("Oh, deu erro aqui") 
+        call_data = player.control.call_data
+        print(call_data)
                 
-        if json_object["command"]["name"] == "attack":
-            attacker = None
-            attacked = None
-
-            for country_owned in player.countries_owned:
-                if country_owned.name == json_object["command"]["args"][1]:
-                    attacker = country_owned
-                    break
-            
-            for country_owned in enemy.countries_owned:
-                if country_owned.name == json_object["command"]["args"][2]:
-                    attacked = country_owned
-                    break
-            
-            if(attacker == None):
-                print("Player", id, "does not own any country named", json_object["command"]["args"][1])
-            elif(attacked == None):
-                print("Player", enemy.id, "does not own any country named", json_object["command"]["args"][2])
-            else:
-                has_won = player.attack(json_object["command"]["args"][0], attacker, attacked)
-                if has_won:
-                    enemy.countries_owned.remove(attacked)
-                    player.countries_owned.append(attacked)
-                    attacked.owner = attacker.owner
-                    attacked.n_troops += json_object["command"]["args"][0]
-                    attacker.n_troops -= json_object["command"]["args"][0]
-                    player.state = "conquering"
-
-                    if len(player.countries_owned) == 42:
-                        self.winner = player
+        if call_data["command"]["name"] == "attack":
+            self._attack(player, enemy)
         
-        elif json_object["command"]["name"] == "move_troops":
-            from_country = None
-            to_country = None
+        elif call_data["command"]["name"] == "move_troops":
+            self._move_troops(player) 
 
-            for country_owned in player.countries_owned:
-                if country_owned.name == json_object["command"]["args"][1]:
-                    from_country = country_owned
-                    break
-            
-            for country_owned in player.countries_owned:
-                if country_owned.name == json_object["command"]["args"][2]:
-                    to_country = country_owned
-                    break
-            
-            if(from_country == None):
-                print("Player", id, "does not own any country named", json_object["command"]["args"][1])
-            elif(to_country == None):
-                print("Player", id, "does not own any country named", json_object["command"]["args"][2])
-            else:
-                player.move_troops(json_object["command"]["args"][0], from_country, to_country)
-
-                if player.state == "conquering":
-                    player.state = "attacking"
-
-            
-
-        elif json_object["command"]["name"] == "set_new_troops":
-            country = None
-
-            for country_owned in player.countries_owned:
-                if country_owned.name == json_object["command"]["args"][1]:
-                    country = country_owned
-                    break
-            
-            if(country == None):
-                print("Player", id, "does not own any country named", json_object["command"]["args"][1])
-            else:
-                player.set_new_troops(json_object["command"]["args"][0], country)
-
-
+        elif call_data["command"]["name"] == "set_new_troops":
+            self._set_new_troops(player)
         
-        elif json_object["command"]["name"] == "pass_turn":
-
-            if player.state == "mobilizing":
-                player.state = "attacking"
-
-            elif player.state == "attacking":
-                player.state = "fortifying"
-
-            elif player.state == "fortifying":
-                player.state = "waiting"
-                self.active_player = enemy
-                enemy.state = "mobilizing"
-
-                self._distribute_new_troops(self.active_player)
-
-            elif player.state == "conquering":
-                print("Player", id, "cannot pass_turn during a conquering state")
+        elif call_data["command"]["name"] == "pass_turn":
+            self._pass_turn(player, enemy)
 
         else:
-            print("Player", id, "is trying to use a command that does not exist (", json_object["command"]["name"], ")")
+            print("Player", id, "is trying to use a command that does not exist (", call_data["command"]["name"], ")")
 
-        print('Player:', id, 'count:', json_object['count'])
+        print('Player:', id, 'count:', call_data['count'])
                 
 if __name__ == '__main__':
 
@@ -318,11 +300,9 @@ if __name__ == '__main__':
     print("Atualizou os dados dos player")
 
     while True:
-        #print("Esperando acao do player", game.active_player.id, "...")
-        game.wait_for_agent(game.active_player.id)
+        game.wait_for_agent(game.active_player)
 
         game.execute_player_action(game.active_player.id)
-        #print("Acao executada")
 
         if game.winner != None:
             print('Player', game.winner.id, "win!")
@@ -336,4 +316,3 @@ if __name__ == '__main__':
                 game.player_2.state = "winner"
                 
         game.update_players_data()
-        #print("Atualizou os dados dos player")

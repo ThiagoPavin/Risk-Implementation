@@ -147,8 +147,8 @@ class Agent():
     #     self.state = self.player_data['state']
 
     def _call_action(self, action: str, args: list):
-        print('Next move')
-        input()
+        # print('Next move')
+        # input()
         with open(self.calls_path, 'w') as outfile:
             self.call_data = {
                 'id': self.id,

@@ -1,6 +1,14 @@
 from country import Country
 import random
 
+class Control:
+    last_m_time = None
+    call_count = None
+    call_path = None
+    data_path = None
+    call_data = None
+    last_call_data = None
+
 class Player:
     def __init__(self, id, n_new_troops):
         self.count = 0
@@ -8,6 +16,7 @@ class Player:
         self.countries_owned = []
         self.n_new_troops = n_new_troops
         self.state = None
+        self.control = Control()
     
     # Falta fazer se o atacante dominar o territorio
     def attack(self, n_dice : int, attacker : Country, attacked : Country):
