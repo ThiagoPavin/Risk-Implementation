@@ -1,41 +1,103 @@
 {
-    "count": 1,
+    "count": 111,
     "id": 1,
-    "n_new_troops": 7,
-    "state": "mobilizing",
+    "n_new_troops": 0,
+    "state": "attacking",
     "countries_owned": [
-        "Yakutsk",
-        "Papua New Guinea",
-        "Ural",
-        "Quebec",
-        "Ontario",
-        "Venezuela",
-        "Indoneasia",
-        "Egypt",
-        "Kamchatka",
-        "Iceland",
-        "Skandinavia",
-        "Siam",
-        "China",
-        "Central America",
-        "Great Britain",
         "Eastern America",
-        "Irkutsk",
-        "Mongolia",
-        "Peru",
+        "Ukraine",
+        "India",
+        "Central America",
+        "Northwest America",
+        "Papua New Guinea",
+        "Madagascar",
+        "Venezuela",
+        "Middle East",
+        "Kamchatka",
+        "East Africa",
+        "Siam",
+        "Northern Europe",
+        "Southern Europe",
+        "Ontario",
+        "Indoneasia",
+        "North Africa",
         "Alberta",
-        "Brazil"
+        "Afganistan",
+        "Brazil",
+        "Ural"
     ],
-    "countries_conections": "working in progress",
     "countries_data": {
-        "Yakutsk": {
+        "Eastern America": {
             "neighbours": [
+                "Ontario",
+                "Quebec",
+                "Central America",
+                "Western America"
+            ],
+            "owner": 1,
+            "n_troops": 10
+        },
+        "China": {
+            "neighbours": [
+                "Afganistan",
+                "Ural",
                 "Siberia",
-                "Irkutsk",
-                "Kamchatka"
+                "Mongolia",
+                "Siam",
+                "India"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Ukraine": {
+            "neighbours": [
+                "Skandinavia",
+                "Northern Europe",
+                "Southern Europe",
+                "Middle East",
+                "Ural",
+                "Afganistan"
             ],
             "owner": 1,
             "n_troops": 1
+        },
+        "India": {
+            "neighbours": [
+                "Middle East",
+                "Afganistan",
+                "China",
+                "Siam"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Central America": {
+            "neighbours": [
+                "Eastern America",
+                "Eastern America",
+                "Venezuela"
+            ],
+            "owner": 1,
+            "n_troops": 12
+        },
+        "Peru": {
+            "neighbours": [
+                "Brazil",
+                "Venezuela",
+                "Argentina"
+            ],
+            "owner": 2,
+            "n_troops": 3
+        },
+        "Northwest America": {
+            "neighbours": [
+                "Alberta",
+                "Alaska",
+                "Ontario",
+                "Greenland"
+            ],
+            "owner": 1,
+            "n_troops": 5
         },
         "Papua New Guinea": {
             "neighbours": [
@@ -44,23 +106,96 @@
                 "Western Australia"
             ],
             "owner": 1,
-            "n_troops": 1
+            "n_troops": 7
         },
-        "Ural": {
+        "Congo": {
             "neighbours": [
-                "Ukraine",
-                "Afganistan",
-                "China",
-                "Siberia"
+                "North Africa",
+                "East Africa",
+                "South Africa"
+            ],
+            "owner": 2,
+            "n_troops": 6
+        },
+        "Madagascar": {
+            "neighbours": [
+                "South Africa",
+                "East Africa"
             ],
             "owner": 1,
             "n_troops": 1
         },
-        "Quebec": {
+        "Venezuela": {
             "neighbours": [
-                "Greenland",
-                "Ontario",
-                "Eastern America"
+                "Brazil",
+                "Peru",
+                "Central America"
+            ],
+            "owner": 1,
+            "n_troops": 2
+        },
+        "Middle East": {
+            "neighbours": [
+                "India",
+                "Afganistan",
+                "Egypt",
+                "East Africa",
+                "Southern Europe",
+                "Ukraine"
+            ],
+            "owner": 1,
+            "n_troops": 10
+        },
+        "Kamchatka": {
+            "neighbours": [
+                "Yakutsk",
+                "Irkutsk",
+                "Japan",
+                "Mongolia"
+            ],
+            "owner": 1,
+            "n_troops": 4
+        },
+        "East Africa": {
+            "neighbours": [
+                "Egypt",
+                "North Africa",
+                "Congo",
+                "South Africa",
+                "Madagascar",
+                "Middle East"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Siam": {
+            "neighbours": [
+                "China",
+                "India",
+                "Indoneasia"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Northern Europe": {
+            "neighbours": [
+                "Great Britain",
+                "Skandinavia",
+                "Ukraine",
+                "Western Europe",
+                "Southern Europe"
+            ],
+            "owner": 1,
+            "n_troops": 5
+        },
+        "Southern Europe": {
+            "neighbours": [
+                "Ukraine",
+                "Middle East",
+                "Egypt",
+                "North Africa",
+                "Western Europe",
+                "Northern Europe"
             ],
             "owner": 1,
             "n_troops": 1
@@ -75,54 +210,7 @@
                 "Western America"
             ],
             "owner": 1,
-            "n_troops": 1
-        },
-        "Venezuela": {
-            "neighbours": [
-                "Brazil",
-                "Peru",
-                "Central America"
-            ],
-            "owner": 1,
-            "n_troops": 1
-        },
-        "Indoneasia": {
-            "neighbours": [
-                "Siam",
-                "Papua New Guinea",
-                "Western Australia"
-            ],
-            "owner": 1,
-            "n_troops": 1
-        },
-        "Egypt": {
-            "neighbours": [
-                "North Africa",
-                "East Africa",
-                "Southern Europe",
-                "Middle East"
-            ],
-            "owner": 1,
-            "n_troops": 1
-        },
-        "Kamchatka": {
-            "neighbours": [
-                "Yakutsk",
-                "Irkutsk",
-                "Japan",
-                "Mongolia"
-            ],
-            "owner": 1,
-            "n_troops": 1
-        },
-        "Iceland": {
-            "neighbours": [
-                "Skandinavia",
-                "Great Britain",
-                "Greenland"
-            ],
-            "owner": 1,
-            "n_troops": 1
+            "n_troops": 7
         },
         "Skandinavia": {
             "neighbours": [
@@ -131,38 +219,17 @@
                 "Northern Europe",
                 "Ukraine"
             ],
-            "owner": 1,
+            "owner": 2,
             "n_troops": 3
         },
-        "Siam": {
+        "Indoneasia": {
             "neighbours": [
-                "China",
-                "India",
-                "Indoneasia"
-            ],
-            "owner": 1,
-            "n_troops": 1
-        },
-        "China": {
-            "neighbours": [
-                "Afganistan",
-                "Ural",
-                "Siberia",
-                "Mongolia",
                 "Siam",
-                "India"
+                "Papua New Guinea",
+                "Western Australia"
             ],
             "owner": 1,
-            "n_troops": 1
-        },
-        "Central America": {
-            "neighbours": [
-                "Eastern America",
-                "Eastern America",
-                "Venezuela"
-            ],
-            "owner": 1,
-            "n_troops": 1
+            "n_troops": 6
         },
         "Great Britain": {
             "neighbours": [
@@ -171,48 +238,17 @@
                 "Northern Europe",
                 "Western Europe"
             ],
-            "owner": 1,
-            "n_troops": 1
+            "owner": 2,
+            "n_troops": 6
         },
-        "Eastern America": {
+        "Western Europe": {
             "neighbours": [
-                "Ontario",
-                "Quebec",
-                "Central America",
-                "Western America"
+                "Great Britain",
+                "Northern Europe",
+                "Southern Europe"
             ],
-            "owner": 1,
-            "n_troops": 1
-        },
-        "Irkutsk": {
-            "neighbours": [
-                "Siberia",
-                "Kamchatka",
-                "Yakutsk",
-                "Mongolia"
-            ],
-            "owner": 1,
-            "n_troops": 1
-        },
-        "Mongolia": {
-            "neighbours": [
-                "China",
-                "Siberia",
-                "Irkutsk",
-                "Kamchatka",
-                "Japan"
-            ],
-            "owner": 1,
-            "n_troops": 13
-        },
-        "Peru": {
-            "neighbours": [
-                "Brazil",
-                "Venezuela",
-                "Argentina"
-            ],
-            "owner": 1,
-            "n_troops": 1
+            "owner": 2,
+            "n_troops": 14
         },
         "Alberta": {
             "neighbours": [
@@ -222,6 +258,36 @@
                 "Western America"
             ],
             "owner": 1,
+            "n_troops": 3
+        },
+        "Irkutsk": {
+            "neighbours": [
+                "Siberia",
+                "Kamchatka",
+                "Yakutsk",
+                "Mongolia"
+            ],
+            "owner": 2,
+            "n_troops": 5
+        },
+        "Iceland": {
+            "neighbours": [
+                "Skandinavia",
+                "Great Britain",
+                "Greenland"
+            ],
+            "owner": 2,
+            "n_troops": 4
+        },
+        "Siberia": {
+            "neighbours": [
+                "Yakutsk",
+                "Irkutsk",
+                "Mongolia",
+                "China",
+                "Ural"
+            ],
+            "owner": 2,
             "n_troops": 1
         },
         "Brazil": {
@@ -232,56 +298,12 @@
                 "North Africa"
             ],
             "owner": 1,
-            "n_troops": 6
-        },
-        "East Africa": {
-            "neighbours": [
-                "Egypt",
-                "North Africa",
-                "Congo",
-                "South Africa",
-                "Madagascar",
-                "Middle East"
-            ],
-            "owner": 2,
             "n_troops": 1
         },
-        "Western Australia": {
+        "Japan": {
             "neighbours": [
-                "Eastern Australia",
-                "Indoneasia",
-                "Papua New Guinea"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
-        "Northwest America": {
-            "neighbours": [
-                "Alberta",
-                "Alaska",
-                "Ontario",
-                "Greenland"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
-        "India": {
-            "neighbours": [
-                "Middle East",
-                "Afganistan",
-                "China",
-                "Siam"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
-        "Afganistan": {
-            "neighbours": [
-                "Ukraine",
-                "Ural",
-                "China",
-                "India",
-                "Middle East"
+                "Kamchatka",
+                "Mongolia"
             ],
             "owner": 2,
             "n_troops": 1
@@ -292,14 +314,6 @@
                 "Quebec",
                 "Northwest America",
                 "Iceland"
-            ],
-            "owner": 2,
-            "n_troops": 7
-        },
-        "Madagascar": {
-            "neighbours": [
-                "South Africa",
-                "East Africa"
             ],
             "owner": 2,
             "n_troops": 1
@@ -313,14 +327,80 @@
             "owner": 2,
             "n_troops": 1
         },
-        "Southern Europe": {
+        "Argentina": {
+            "neighbours": [
+                "Peru",
+                "Brazil"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Alaska": {
+            "neighbours": [
+                "Northwest America",
+                "Alberta",
+                "Kamchatka"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Ural": {
             "neighbours": [
                 "Ukraine",
-                "Middle East",
+                "Afganistan",
+                "China",
+                "Siberia"
+            ],
+            "owner": 1,
+            "n_troops": 3
+        },
+        "North Africa": {
+            "neighbours": [
                 "Egypt",
-                "North Africa",
-                "Western Europe",
-                "Northern Europe"
+                "East Africa",
+                "Congo",
+                "Brazil",
+                "Western Europe"
+            ],
+            "owner": 1,
+            "n_troops": 1
+        },
+        "Mongolia": {
+            "neighbours": [
+                "China",
+                "Siberia",
+                "Irkutsk",
+                "Kamchatka",
+                "Japan"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Quebec": {
+            "neighbours": [
+                "Greenland",
+                "Ontario",
+                "Eastern America"
+            ],
+            "owner": 2,
+            "n_troops": 4
+        },
+        "Afganistan": {
+            "neighbours": [
+                "Ukraine",
+                "Ural",
+                "China",
+                "India",
+                "Middle East"
+            ],
+            "owner": 1,
+            "n_troops": 4
+        },
+        "Western Australia": {
+            "neighbours": [
+                "Eastern Australia",
+                "Indoneasia",
+                "Papua New Guinea"
             ],
             "owner": 2,
             "n_troops": 1
@@ -335,188 +415,1090 @@
             "owner": 2,
             "n_troops": 1
         },
-        "Middle East": {
-            "neighbours": [
-                "India",
-                "Afganistan",
-                "Egypt",
-                "East Africa",
-                "Southern Europe",
-                "Ukraine"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
-        "Congo": {
-            "neighbours": [
-                "North Africa",
-                "East Africa",
-                "South Africa"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
-        "Japan": {
-            "neighbours": [
-                "Kamchatka",
-                "Mongolia"
-            ],
-            "owner": 2,
-            "n_troops": 5
-        },
-        "Ukraine": {
-            "neighbours": [
-                "Skandinavia",
-                "Northern Europe",
-                "Southern Europe",
-                "Middle East",
-                "Ural",
-                "Afganistan"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
-        "Northern Europe": {
-            "neighbours": [
-                "Great Britain",
-                "Skandinavia",
-                "Ukraine",
-                "Western Europe",
-                "Southern Europe"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
-        "North Africa": {
-            "neighbours": [
-                "Egypt",
-                "East Africa",
-                "Congo",
-                "Brazil",
-                "Western Europe"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
-        "Argentina": {
-            "neighbours": [
-                "Peru",
-                "Brazil"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
-        "Western Europe": {
-            "neighbours": [
-                "Great Britain",
-                "Northern Europe",
-                "Southern Europe"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
-        "Siberia": {
-            "neighbours": [
-                "Yakutsk",
-                "Irkutsk",
-                "Mongolia",
-                "China",
-                "Ural"
-            ],
-            "owner": 2,
-            "n_troops": 9
-        },
-        "Alaska": {
-            "neighbours": [
-                "Northwest America",
-                "Alberta",
-                "Kamchatka"
-            ],
-            "owner": 2,
-            "n_troops": 1
-        },
         "Eastern Australia": {
             "neighbours": [
                 "Papua New Guinea",
                 "Western Australia"
             ],
             "owner": 2,
-            "n_troops": 2
+            "n_troops": 1
+        },
+        "Yakutsk": {
+            "neighbours": [
+                "Siberia",
+                "Irkutsk",
+                "Kamchatka"
+            ],
+            "owner": 2,
+            "n_troops": 1
+        },
+        "Egypt": {
+            "neighbours": [
+                "North Africa",
+                "East Africa",
+                "Southern Europe",
+                "Middle East"
+            ],
+            "owner": 2,
+            "n_troops": 1
         }
     },
     "border_countries": {
-        "Yakutsk": [
-            "Siberia"
-        ],
-        "Papua New Guinea": [
-            "Eastern Australia",
-            "Western Australia"
-        ],
-        "Ural": [
-            "Ukraine",
-            "Afganistan",
-            "Siberia"
-        ],
-        "Quebec": [
-            "Greenland"
-        ],
-        "Ontario": [
-            "Northwest America",
-            "Greenland",
+        "Eastern America": [
+            "Quebec",
+            "Western America",
+            "Quebec",
+            "Western America",
+            "Quebec",
+            "Western America",
+            "Quebec",
+            "Western America",
+            "Quebec",
+            "Western America",
+            "Quebec",
+            "Western America",
+            "Quebec",
+            "Western America",
+            "Quebec",
+            "Western America",
+            "Quebec",
+            "Western America",
+            "Quebec",
+            "Western America",
+            "Quebec",
             "Western America"
-        ],
-        "Indoneasia": [
-            "Western Australia"
-        ],
-        "Egypt": [
-            "North Africa",
-            "East Africa",
-            "Southern Europe",
-            "Middle East"
-        ],
-        "Kamchatka": [
-            "Japan"
-        ],
-        "Iceland": [
-            "Greenland"
-        ],
-        "Skandinavia": [
-            "Northern Europe",
-            "Ukraine"
-        ],
-        "Siam": [
-            "India"
         ],
         "China": [
             "Afganistan",
+            "Ural",
             "Siberia",
-            "India"
-        ],
-        "Great Britain": [
-            "Northern Europe",
-            "Western Europe"
-        ],
-        "Eastern America": [
-            "Western America"
-        ],
-        "Irkutsk": [
-            "Siberia"
-        ],
-        "Mongolia": [
+            "Mongolia",
+            "Afganistan",
+            "Ural",
             "Siberia",
-            "Japan"
+            "Mongolia",
+            "Afganistan",
+            "Ural",
+            "Siberia",
+            "Mongolia",
+            "Afganistan",
+            "Ural",
+            "Siberia",
+            "Mongolia",
+            "Ural",
+            "Siberia",
+            "Mongolia",
+            "Ural",
+            "Siberia",
+            "Mongolia"
+        ],
+        "Ukraine": [
+            "Ural",
+            "Afganistan",
+            "Ural",
+            "Afganistan",
+            "Ural",
+            "Afganistan",
+            "Ural",
+            "Afganistan",
+            "Ural",
+            "Skandinavia",
+            "Ural",
+            "Skandinavia",
+            "Ural",
+            "Skandinavia",
+            "Ural",
+            "Skandinavia",
+            "Skandinavia",
+            "Skandinavia"
+        ],
+        "India": [
+            "Afganistan",
+            "Afganistan",
+            "Afganistan",
+            "Afganistan",
+            "China",
+            "China",
+            "China",
+            "China",
+            "China"
         ],
         "Peru": [
+            "Brazil",
+            "Argentina",
+            "Brazil",
+            "Argentina",
+            "Brazil",
+            "Argentina",
+            "Brazil",
+            "Argentina",
+            "Brazil",
+            "Argentina",
+            "Brazil",
+            "Argentina",
+            "Brazil",
+            "Argentina",
+            "Argentina",
             "Argentina"
+        ],
+        "Northwest America": [
+            "Alberta",
+            "Alaska",
+            "Greenland",
+            "Alberta",
+            "Alaska",
+            "Greenland",
+            "Alberta",
+            "Alaska",
+            "Greenland",
+            "Alaska",
+            "Greenland",
+            "Alaska",
+            "Greenland",
+            "Alaska",
+            "Greenland",
+            "Alaska",
+            "Greenland",
+            "Alaska",
+            "Greenland",
+            "Alaska",
+            "Greenland",
+            "Alaska",
+            "Greenland",
+            "Alaska",
+            "Greenland"
+        ],
+        "Papua New Guinea": [
+            "Eastern Australia",
+            "Western Australia",
+            "Eastern Australia",
+            "Western Australia",
+            "Eastern Australia",
+            "Western Australia",
+            "Eastern Australia",
+            "Western Australia",
+            "Eastern Australia",
+            "Western Australia",
+            "Eastern Australia",
+            "Western Australia",
+            "Eastern Australia",
+            "Western Australia",
+            "Eastern Australia",
+            "Western Australia",
+            "Eastern Australia",
+            "Western Australia",
+            "Eastern Australia",
+            "Western Australia",
+            "Eastern Australia",
+            "Western Australia"
+        ],
+        "Congo": [
+            "North Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa"
+        ],
+        "Madagascar": [
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa",
+            "South Africa"
+        ],
+        "Venezuela": [
+            "Brazil",
+            "Brazil",
+            "Brazil",
+            "Brazil",
+            "Brazil",
+            "Brazil",
+            "Brazil",
+            "Peru",
+            "Peru"
+        ],
+        "Middle East": [
+            "Afganistan",
+            "Egypt",
+            "Afganistan",
+            "Egypt",
+            "Afganistan",
+            "Egypt",
+            "Afganistan",
+            "Egypt",
+            "Egypt",
+            "Egypt",
+            "Egypt",
+            "Egypt",
+            "Egypt",
+            "Egypt",
+            "Egypt"
+        ],
+        "Kamchatka": [
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia",
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia",
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia",
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia",
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia",
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia",
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia",
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia",
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia",
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia",
+            "Yakutsk",
+            "Irkutsk",
+            "Japan",
+            "Mongolia"
+        ],
+        "East Africa": [
+            "Egypt",
+            "North Africa",
+            "South Africa",
+            "Egypt",
+            "South Africa",
+            "Egypt",
+            "South Africa",
+            "Egypt",
+            "South Africa",
+            "Egypt",
+            "South Africa",
+            "Egypt",
+            "South Africa",
+            "Egypt",
+            "South Africa",
+            "Egypt",
+            "South Africa",
+            "Egypt",
+            "South Africa",
+            "Egypt",
+            "South Africa",
+            "Egypt",
+            "Congo",
+            "South Africa"
+        ],
+        "Northern Europe": [
+            "Western Europe",
+            "Western Europe",
+            "Great Britain",
+            "Western Europe",
+            "Great Britain",
+            "Western Europe",
+            "Great Britain",
+            "Western Europe",
+            "Great Britain",
+            "Skandinavia",
+            "Western Europe",
+            "Great Britain",
+            "Skandinavia",
+            "Western Europe",
+            "Great Britain",
+            "Skandinavia",
+            "Western Europe",
+            "Great Britain",
+            "Skandinavia",
+            "Western Europe",
+            "Great Britain",
+            "Skandinavia",
+            "Western Europe",
+            "Great Britain",
+            "Skandinavia",
+            "Western Europe"
+        ],
+        "Southern Europe": [
+            "Egypt",
+            "North Africa",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe"
+        ],
+        "Ontario": [
+            "Alberta",
+            "Quebec",
+            "Greenland",
+            "Western America",
+            "Alberta",
+            "Quebec",
+            "Greenland",
+            "Western America",
+            "Alberta",
+            "Quebec",
+            "Greenland",
+            "Western America",
+            "Quebec",
+            "Greenland",
+            "Western America",
+            "Quebec",
+            "Greenland",
+            "Western America",
+            "Quebec",
+            "Greenland",
+            "Western America",
+            "Quebec",
+            "Greenland",
+            "Western America",
+            "Quebec",
+            "Greenland",
+            "Western America",
+            "Quebec",
+            "Greenland",
+            "Western America",
+            "Quebec",
+            "Greenland",
+            "Western America",
+            "Quebec",
+            "Greenland",
+            "Western America"
+        ],
+        "Skandinavia": [
+            "Iceland",
+            "Iceland",
+            "Iceland",
+            "Great Britain",
+            "Iceland",
+            "Great Britain",
+            "Iceland",
+            "Great Britain"
+        ],
+        "Indoneasia": [
+            "Western Australia",
+            "Western Australia",
+            "Western Australia",
+            "Western Australia",
+            "Western Australia",
+            "Western Australia",
+            "Western Australia",
+            "Western Australia",
+            "Western Australia",
+            "Western Australia",
+            "Western Australia"
+        ],
+        "Great Britain": [
+            "Iceland",
+            "Western Europe",
+            "Iceland",
+            "Western Europe"
+        ],
+        "North Africa": [
+            "Egypt",
+            "Brazil",
+            "Western Europe",
+            "Egypt",
+            "Brazil",
+            "Western Europe",
+            "Egypt",
+            "Brazil",
+            "Western Europe",
+            "Egypt",
+            "Brazil",
+            "Western Europe",
+            "Egypt",
+            "Brazil",
+            "Western Europe",
+            "Egypt",
+            "Brazil",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Western Europe",
+            "Egypt",
+            "Congo",
+            "Western Europe"
         ],
         "Alberta": [
             "Alaska",
-            "Northwest America",
+            "Western America",
+            "Alaska",
+            "Western America",
+            "Alaska",
+            "Western America",
+            "Alaska",
+            "Western America",
+            "Alaska",
+            "Western America",
+            "Alaska",
+            "Western America",
+            "Alaska",
+            "Western America",
+            "Alaska",
             "Western America"
+        ],
+        "Afganistan": [
+            "Ural",
+            "Ural",
+            "Ural",
+            "China",
+            "Ural",
+            "China",
+            "China",
+            "China",
+            "China"
+        ],
+        "Siam": [
+            "China",
+            "China",
+            "China",
+            "China",
+            "China"
         ],
         "Brazil": [
             "Argentina",
-            "North Africa"
+            "Argentina",
+            "Peru",
+            "Argentina",
+            "Peru",
+            "Argentina"
+        ],
+        "Ural": [
+            "China",
+            "Siberia",
+            "China",
+            "Siberia",
+            "China",
+            "Siberia"
         ]
+    },
+    "connection_matrix": {
+        "Eastern America": {
+            "Ukraine": false,
+            "India": false,
+            "Central America": true,
+            "Northwest America": true,
+            "Papua New Guinea": false,
+            "Madagascar": true,
+            "Venezuela": false,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": true,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": false,
+            "Brazil": true,
+            "Ural": false
+        },
+        "China": {
+            "Eastern America": false,
+            "Ukraine": true,
+            "India": false,
+            "Central America": false,
+            "Peru": false,
+            "Northwest America": false,
+            "Papua New Guinea": true,
+            "Congo": false,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": true,
+            "Northern Europe": true,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true
+        },
+        "Ukraine": {
+            "Eastern America": false,
+            "India": true,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": true,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": true,
+            "Northern Europe": true,
+            "Southern Europe": true,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true,
+            "Brazil": false,
+            "Ural": true
+        },
+        "India": {
+            "Eastern America": false,
+            "Ukraine": true,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": true,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": true,
+            "Northern Europe": true,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true,
+            "Brazil": false,
+            "Ural": true
+        },
+        "Central America": {
+            "Eastern America": true,
+            "Ukraine": false,
+            "India": false,
+            "Northwest America": true,
+            "Papua New Guinea": false,
+            "Madagascar": true,
+            "Venezuela": false,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": true,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": false,
+            "Brazil": true,
+            "Ural": false
+        },
+        "Peru": {
+            "Eastern America": true,
+            "Ukraine": false,
+            "India": false,
+            "Central America": true,
+            "Northwest America": true,
+            "Papua New Guinea": false,
+            "Congo": false,
+            "Madagascar": false,
+            "Venezuela": true,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": false,
+            "Brazil": true,
+            "Ural": false
+        },
+        "Northwest America": {
+            "Eastern America": true,
+            "Ukraine": false,
+            "India": false,
+            "Central America": true,
+            "Papua New Guinea": false,
+            "Madagascar": true,
+            "Venezuela": false,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": true,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": true,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Alberta": true,
+            "Afganistan": false,
+            "Brazil": true,
+            "Ural": false
+        },
+        "Papua New Guinea": {
+            "Eastern America": false,
+            "Ukraine": true,
+            "India": true,
+            "Central America": false,
+            "Northwest America": false,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true,
+            "Brazil": false,
+            "Ural": false
+        },
+        "Congo": {
+            "Eastern America": false,
+            "Ukraine": false,
+            "India": false,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": false,
+            "Madagascar": true,
+            "Venezuela": true,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": true,
+            "Siam": true,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": true,
+            "Alberta": false,
+            "Afganistan": false,
+            "Brazil": false,
+            "Ural": false
+        },
+        "Madagascar": {
+            "Eastern America": true,
+            "Ukraine": false,
+            "India": false,
+            "Central America": true,
+            "Northwest America": true,
+            "Papua New Guinea": false,
+            "Venezuela": true,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": true,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": true,
+            "Alberta": false,
+            "Afganistan": false,
+            "Brazil": false,
+            "Ural": false
+        },
+        "Venezuela": {
+            "Eastern America": false,
+            "Ukraine": false,
+            "India": false,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": false,
+            "Madagascar": true,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": true,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": false,
+            "Brazil": true,
+            "Ural": false
+        },
+        "Middle East": {
+            "Eastern America": false,
+            "Ukraine": true,
+            "India": true,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": false,
+            "Madagascar": true,
+            "Venezuela": false,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": true,
+            "Northern Europe": true,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true,
+            "Brazil": false,
+            "Ural": true
+        },
+        "Kamchatka": {
+            "Eastern America": false,
+            "Ukraine": false,
+            "India": false,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": false,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": false,
+            "East Africa": false,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": false,
+            "Brazil": false,
+            "Ural": false
+        },
+        "East Africa": {
+            "Eastern America": true,
+            "Ukraine": false,
+            "India": false,
+            "Central America": true,
+            "Northwest America": true,
+            "Papua New Guinea": false,
+            "Madagascar": false,
+            "Venezuela": true,
+            "Middle East": false,
+            "Kamchatka": false,
+            "Siam": true,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": true,
+            "Alberta": false,
+            "Afganistan": false,
+            "Brazil": false,
+            "Ural": false
+        },
+        "Siam": {
+            "Eastern America": false,
+            "Ukraine": true,
+            "India": true,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": false,
+            "Madagascar": true,
+            "Venezuela": false,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": true,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true,
+            "Brazil": false,
+            "Ural": false
+        },
+        "Northern Europe": {
+            "Eastern America": false,
+            "Ukraine": true,
+            "India": true,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": false,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": false,
+            "Southern Europe": true,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true,
+            "Brazil": false,
+            "Ural": true
+        },
+        "Southern Europe": {
+            "Eastern America": false,
+            "Ukraine": true,
+            "India": false,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": false,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": false,
+            "Northern Europe": true,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true,
+            "Brazil": false,
+            "Ural": true
+        },
+        "Ontario": {
+            "Eastern America": false,
+            "Ukraine": false,
+            "India": false,
+            "Central America": false,
+            "Northwest America": true,
+            "Papua New Guinea": false,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Alberta": true,
+            "Afganistan": false,
+            "Brazil": true,
+            "Ural": false
+        },
+        "Skandinavia": {
+            "Eastern America": false,
+            "China": true,
+            "Ukraine": true,
+            "India": true,
+            "Central America": false,
+            "Peru": false,
+            "Northwest America": false,
+            "Papua New Guinea": true,
+            "Congo": false,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": true,
+            "Northern Europe": true,
+            "Southern Europe": true,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true
+        },
+        "Indoneasia": {
+            "Eastern America": false,
+            "Ukraine": true,
+            "India": true,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": false,
+            "Madagascar": true,
+            "Venezuela": false,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": true,
+            "Siam": true,
+            "Northern Europe": true,
+            "Southern Europe": true,
+            "Ontario": false,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true,
+            "Brazil": false,
+            "Ural": false
+        },
+        "Great Britain": {
+            "Eastern America": false,
+            "China": true,
+            "Ukraine": true,
+            "India": true,
+            "Central America": false,
+            "Peru": false,
+            "Northwest America": false,
+            "Papua New Guinea": true,
+            "Congo": false,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": true,
+            "Northern Europe": true,
+            "Southern Europe": true,
+            "Ontario": false,
+            "Skandinavia": true,
+            "Indoneasia": true,
+            "North Africa": false
+        },
+        "North Africa": {
+            "Eastern America": false,
+            "Ukraine": false,
+            "India": false,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": false,
+            "Madagascar": true,
+            "Venezuela": false,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": true,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": false,
+            "Indoneasia": false,
+            "Alberta": false,
+            "Afganistan": false,
+            "Brazil": false,
+            "Ural": false
+        },
+        "Alberta": {
+            "Eastern America": false,
+            "Ukraine": false,
+            "India": false,
+            "Central America": false,
+            "Northwest America": true,
+            "Papua New Guinea": false,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": true,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Afganistan": false,
+            "Brazil": true,
+            "Ural": false
+        },
+        "Afganistan": {
+            "Eastern America": false,
+            "Ukraine": true,
+            "India": true,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": true,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": true,
+            "Northern Europe": true,
+            "Southern Europe": true,
+            "Ontario": false,
+            "Indoneasia": true,
+            "North Africa": false,
+            "Alberta": false,
+            "Brazil": false,
+            "Ural": true
+        },
+        "Brazil": {
+            "Eastern America": true,
+            "Ukraine": false,
+            "India": false,
+            "Central America": true,
+            "Northwest America": true,
+            "Papua New Guinea": false,
+            "Madagascar": false,
+            "Venezuela": true,
+            "Middle East": false,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": false,
+            "Northern Europe": false,
+            "Southern Europe": false,
+            "Ontario": true,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Alberta": true,
+            "Afganistan": false,
+            "Ural": false
+        },
+        "Ural": {
+            "Eastern America": false,
+            "Ukraine": true,
+            "India": true,
+            "Central America": false,
+            "Northwest America": false,
+            "Papua New Guinea": false,
+            "Madagascar": false,
+            "Venezuela": false,
+            "Middle East": true,
+            "Kamchatka": false,
+            "East Africa": false,
+            "Siam": false,
+            "Northern Europe": true,
+            "Southern Europe": true,
+            "Ontario": false,
+            "Indoneasia": false,
+            "North Africa": false,
+            "Alberta": false,
+            "Afganistan": true,
+            "Brazil": false
+        }
     }
 }

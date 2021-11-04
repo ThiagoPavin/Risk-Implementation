@@ -1,8 +1,1 @@
-{
-    "id": 1,
-    "count": 0,
-    "command": {
-        "name": "",
-        "args": []
-    }
-}
+{"id": 1, "count": 55, "command": {"name": "attack", "args": [2, "Ural", "Siberia"]}}

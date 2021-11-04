@@ -11,12 +11,14 @@ class Control:
 
 class Player:
     def __init__(self, id, n_new_troops):
-        self.count = 0
+        self.data_count = 0
         self.id = id
         self.countries_owned = []
         self.n_new_troops = n_new_troops
         self.state = None
         self.control = Control()
+        self.connection_matrix = {}
+        self.border_countries = {}
     
     # Falta fazer se o atacante dominar o territorio
     def attack(self, n_dice : int, attacker : Country, attacked : Country):

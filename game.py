@@ -28,6 +28,8 @@ class Game:
 
         self.winner = None
 
+        self.map_changed = True
+
     def _distribute_new_troops(self, player: Player):
         n_countries_owned = len(player.countries_owned)
         n_new_troops = int(n_countries_owned // 3)
@@ -63,31 +65,69 @@ class Game:
 
         return countries_data
 
+    def _is_connected(self, country_1, country_2, countries_visited):
+        for neighbour in country_1.neighbours:
+            if neighbour in countries_visited:
+                continue
+            elif neighbour.owner == country_1.owner:
+                if neighbour == country_2:
+                    return True
+                else:
+                    countries_visited.append(neighbour)
+                    if self._is_connected(neighbour, country_2, countries_visited):
+                        return True
+                    else:
+                        return False
+        return False
+
+    def _create_connection_matrix(self, player):
+        for country in player.countries_owned:
+            player.connection_matrix[country.name] = {}
+        
+        for country_1 in player.countries_owned:
+            for country_2 in player.countries_owned:
+                if country_1 == country_2:
+                    continue
+                elif (country_1, country_2) in player.connection_matrix.items():
+                    continue
+                else:
+                    countries_visited = []
+                    countries_visited.append(country_1)
+                    if self._is_connected(country_1, country_2, countries_visited):
+                        player.connection_matrix[country_1.name][country_2.name] = True
+                        player.connection_matrix[country_2.name][country_1.name] = True
+                    else:
+                        player.connection_matrix[country_1.name][country_2.name] = False
+                        player.connection_matrix[country_2.name][country_1.name] = False
+
+    def _create_border_countries(self, player):
+        for country in player.countries_owned:
+                for neighbour in country.neighbours:
+                    if self.world.country_dict[neighbour.name].owner != player:
+                        if country.name not in player.border_countries:
+                            player.border_countries[country.name] = []
+                            player.border_countries[country.name].append(neighbour.name)
+                        else:
+                            player.border_countries[country.name].append(neighbour.name)
+
     def _create_player_data(self, countries_data, player):
         countries_owned_names = [country.name for country in player.countries_owned]
 
-        border_countries = {}
+        player.data_count += 1
 
-        for country in player.countries_owned:
-            for neighbour in country.neighbours:
-                if self.world.country_dict[neighbour.name].owner != player:
-                    if country.name not in border_countries:
-                        border_countries[country.name] = []
-                        border_countries[country.name].append(neighbour.name)
-                    else:
-                        border_countries[country.name].append(neighbour.name)
-
-        player.count += 1
+        if self.map_changed:
+            self._create_border_countries(player)
+            self._create_connection_matrix(player)
 
         data = {
-            "count": player.count,
+            "count": player.data_count,
             "id": player.id,
             "n_new_troops": player.n_new_troops,
             "state": player.state,
             "countries_owned": countries_owned_names,
-            "countries_conections": "working in progress",
             "countries_data": countries_data,
-            "border_countries": border_countries
+            "border_countries": player.border_countries,
+            "connection_matrix": player.connection_matrix
         }
 
         json_data = json.dumps(data, indent = 4)
@@ -154,14 +194,16 @@ class Game:
                     with open(player.control.call_path) as openfile:
                         data = json.load(openfile)
                         if data["count"] == player.control.call_count:
-                            print("Atualizou sem precisar")
+                            #print("Atualizou sem precisar")
+                            pass
                         else:
                             player.control.last_call_data = player.control.call_data
                             player.control.call_data = data
                         player.control.call_count = data["count"]
                         break
                 except:
-                    print("Oh, deu erro aqui")
+                    #print("Oh, deu erro aqui")
+                    pass
 
             current_time = os.path.getmtime(player.control.call_path)
 
@@ -197,15 +239,25 @@ class Game:
 
                 if len(player.countries_owned) == 42:
                     self.winner = player
+            
+            self.map_changed = has_won
 
-    def _move_troops(self, player):
+    def _move_troops(self, player, enemy):
         from_country = None
         to_country = None
 
         if player.state == 'conquering':
             if player.control.call_data['command']['args'][1] != player.control.last_call_data['command']['args'][1] or player.control.call_data['command']['args'][2] != player.control.last_call_data['command']['args'][2]:
                 print("Player", player.id, "can only move between", player.control.last_call_data['command']['args'][1], "and", player.control.last_call_data['command']['args'][2], "during a conquering")
-                return 
+                return
+
+        if player.state == 'fortifying':
+            country_1 = player.control.call_data["command"]["args"][1]
+            country_2 = player.control.call_data["command"]["args"][2]
+            if not player.connection_matrix[country_1][country_2]:
+                print("Player", player.id, "is trying to mobilize troops between countries not connected (", country_1, "-", country_2, ")")
+                return
+            
 
         for country_owned in player.countries_owned:
             if country_owned.name == player.control.call_data["command"]["args"][1]:
@@ -226,6 +278,9 @@ class Game:
 
             if player.state == "conquering":
                 player.state = "attacking"
+
+            elif player.state == "fortifying":
+                self._pass_turn(player, enemy) 
 
     def _set_new_troops(self, player):
         country = None
@@ -257,6 +312,8 @@ class Game:
             print("Player", id, "cannot pass_turn during a conquering state")
 
     def execute_player_action(self, id):
+        self.map_changed = False
+
         if id == 1:
             player = self.player_1
             enemy = self.player_2
@@ -271,7 +328,7 @@ class Game:
             self._attack(player, enemy)
         
         elif call_data["command"]["name"] == "move_troops":
-            self._move_troops(player) 
+            self._move_troops(player, enemy) 
 
         elif call_data["command"]["name"] == "set_new_troops":
             self._set_new_troops(player)

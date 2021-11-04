@@ -1,8 +1,1 @@
-{
-    "id": 2,
-    "count": 0,
-    "command": {
-        "name": "",
-        "args": []
-    }
-}
+{"id": 2, "count": 56, "command": {"name": "move_troops", "args": [1, "Iceland", "Western Europe"]}}

@@ -47,21 +47,18 @@ class Agent():
                 break
 
     def attack(self):
-        count = 0
-        while count < 10:
+        for _ in range(10):
             random_country_name = random.choice(self.player_data['countries_owned'])
 
-            print(random_country_name, self.player_data['countries_data'][random_country_name]['owner'])
+            #print(random_country_name, self.player_data['countries_data'][random_country_name]['owner'])
 
             if self.player_data['countries_data'][random_country_name]['n_troops'] > 1:
                 for neighbour_name in self.player_data['countries_data'][random_country_name]['neighbours']:
                     if self.player_data['countries_data'][neighbour_name]['owner'] != self.id:
                         attack_chance = random.randrange(100)
                         if attack_chance < 60:
-                            print(neighbour_name, self.player_data['countries_data'][neighbour_name]['owner'])
-                            print(self.player_data['countries_data'][neighbour_name]['owner'] != self.id)
-                            #print(self.player_data['countries_data'][neighbour_name]['owner'] is not self.id)
-                            #print(type(self.player_data['countries_data'][neighbour_name]['owner']), type(self.id))
+                            # print(neighbour_name, self.player_data['countries_data'][neighbour_name]['owner'])
+                            # print(self.player_data['countries_data'][neighbour_name]['owner'] != self.id)
                             action = 'attack'
                             if self.player_data['countries_data'][random_country_name]['n_troops'] == 2:
                                 n_dice = 1
@@ -79,12 +76,8 @@ class Agent():
             if pass_chance >= 9:
                 self._pass_turn()
                 return
-
-            count += 1
             
-        self._pass_turn()
-
-            
+        self._pass_turn()            
 
     def mobilize(self):
         """
@@ -115,7 +108,24 @@ class Agent():
         """
         This bot does not fortify already
         """
-        self._pass_turn()
+        country_1 = None
+        for _ in range(10):
+            country_1 = random.choice(self.player_data['countries_owned'])
+            if self.player_data['countries_data'][country_1]['n_troops'] > 1:
+                break
+        
+        if country_1 != None:
+            for country_2 in self.player_data['countries_owned']:
+                if country_1 == country_2:
+                    continue
+                elif self.player_data['connection_matrix'][country_1][country_2] == True:
+                    action = 'move_troops'
+                    n_troops = random.randrange(self.player_data['countries_data'][country_1]['n_troops'])
+                    args = [n_troops, country_1, country_2]
+                    self._call_action(action, args)
+                    break
+        else:            
+            self._pass_turn()
 
     def _file_changed(self, last_count):
         while True:
@@ -123,7 +133,7 @@ class Agent():
                 with open(self.data_path) as openfile:
                     data = json.load(openfile)
                     if data["count"] == last_count:
-                        print("Atualizou sem precisar")
+                        #print("Atualizou sem precisar")
                         return False
                     else:
                         self.player_data_count = data["count"]
@@ -136,15 +146,6 @@ class Agent():
         self.player_data = data
         self.state = self.player_data['state']
 
-    # def _get_game_data(self):
-    #     while True:
-    #         try:
-    #             with open(self.data_path, 'r') as openfile:
-    #                 self.player_data = json.load(openfile)
-    #                 break
-    #         except:
-    #             pass  
-    #     self.state = self.player_data['state']
 
     def _call_action(self, action: str, args: list):
         # print('Next move')
