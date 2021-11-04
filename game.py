@@ -81,6 +81,8 @@ class Game:
         return False
 
     def _create_connection_matrix(self, player):
+        player.connection_matrix = {} 
+
         for country in player.countries_owned:
             player.connection_matrix[country.name] = {}
         
@@ -101,6 +103,8 @@ class Game:
                         player.connection_matrix[country_2.name][country_1.name] = False
 
     def _create_border_countries(self, player):
+        player.border_countries = {}
+
         for country in player.countries_owned:
                 for neighbour in country.neighbours:
                     if self.world.country_dict[neighbour.name].owner != player:
