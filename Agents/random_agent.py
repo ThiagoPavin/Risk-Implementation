@@ -208,8 +208,8 @@ if __name__ == "__main__":
             time.sleep(0.5)
             agent.mobilize()
         elif agent.state == 'winner':
-            print('KNEEL BEFORE MY SUPERIORITY!')
+            print('I am surprised this actualy worked')
         elif agent.state == 'loser':
-            print('You won this time...')
+            print('This was expected')
         else:
             print('State unknown')

@@ -35,10 +35,10 @@ class Game:
         n_new_troops = int(n_countries_owned // 3)
         player.n_new_troops += n_new_troops
 
-    def _create_call_data(self, id, count):
+    def _create_call_data(self, id, call_count):
         data = {
             'id': id,
-            'count': count,
+            'count': call_count,
             'command': {
                 'name': "",
                 'args': []
@@ -196,14 +196,14 @@ class Game:
             while True:
                 try:
                     with open(player.control.call_path) as openfile:
-                        data = json.load(openfile)
-                        if data["count"] == player.control.call_count:
+                        call_data = json.load(openfile)
+                        if call_data["count"] == player.control.call_count:
                             #print("Atualizou sem precisar")
                             pass
                         else:
                             player.control.last_call_data = player.control.call_data
-                            player.control.call_data = data
-                        player.control.call_count = data["count"]
+                            player.control.call_data = call_data
+                        player.control.call_count = call_data["count"]
                         break
                 except:
                     #print("Oh, deu erro aqui")
