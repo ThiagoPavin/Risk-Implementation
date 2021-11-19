@@ -19,7 +19,6 @@ class World:
             for country in continent:
                 self.country_dict[country] = Country(country)
                 self.country_list.append(self.country_dict[country])
-        
 
         # North America
         self.country_dict["Alaska"].add_neighbours([self.country_dict["Northwest America"], self.country_dict["Alberta"], self.country_dict["Kamchatka"]])

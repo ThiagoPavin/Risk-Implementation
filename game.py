@@ -30,12 +30,12 @@ class Game:
 
         self.map_changed = True
 
-    def _distribute_new_troops(self, player: Player):
+    def _distribute_new_troops(self, player : Player):
         n_countries_owned = len(player.countries_owned)
         n_new_troops = int(n_countries_owned // 3)
         player.n_new_troops += n_new_troops
 
-    def _create_call_data(self, id, call_count):
+    def _create_call_data(self, id: int, call_count: int):
         data = {
             'id': id,
             'count': call_count,
@@ -49,11 +49,11 @@ class Game:
         
         return json_data
 
-    def _update_json_file(self, path, json_data):
+    def _update_json_file(self, path : str, json_data):
         with open(path, "w") as outfile:
             outfile.write(json_data)
 
-    def _create_countries_data(self):
+    def _create_countries_data(self) -> dict:
         countries_data = {} 
 
         for country in self.world.country_list:
@@ -65,7 +65,7 @@ class Game:
 
         return countries_data
 
-    def _is_connected(self, country_1, country_2, countries_visited):
+    def _is_connected(self, country_1, country_2, countries_visited) -> bool:
         for neighbour in country_1.neighbours:
             if neighbour in countries_visited:
                 continue
@@ -102,7 +102,7 @@ class Game:
                         player.connection_matrix[country_1.name][country_2.name] = False
                         player.connection_matrix[country_2.name][country_1.name] = False
 
-    def _create_border_countries(self, player):
+    def _create_border_countries(self, player : Player):
         player.border_countries = {}
 
         for country in player.countries_owned:
