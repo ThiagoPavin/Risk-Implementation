@@ -133,13 +133,14 @@ class Agent():
 
     def fortify(self):
         """
-        This bot does not fortify already
+        This bot does fortify already
         """
         country_1 = None
         for _ in range(10):
             country_1 = random.choice(self.player_data['countries_owned'])
             if self.player_data['countries_data'][country_1]['n_troops'] > 1:
                 break
+            country_1 = None
         
         if country_1 != None:
             for country_2 in self.player_data['countries_owned']:
@@ -150,9 +151,9 @@ class Agent():
                     n_troops = random.randrange(self.player_data['countries_data'][country_1]['n_troops'])
                     args = [n_troops, country_1, country_2]
                     self._call_action(action, args)
-                    break
-        else:            
-            self._pass_turn()
+                    return
+            
+        self._pass_turn()
 
     def _file_changed(self, last_count):
         while True:
@@ -193,7 +194,7 @@ class Agent():
 
         self.state = 'waiting'
 
-        self._log()
+        #self._log()
 
     def _pass_turn(self):
         self._call_action('pass_turn', [])
@@ -223,16 +224,16 @@ if __name__ == "__main__":
         if agent.state == 'waiting':
             agent.wait_game()
         elif agent.state == 'attacking':
-            time.sleep(0.1)
+            #time.sleep(0.1)
             agent.attack()
         elif agent.state == 'conquering':
-            time.sleep(0.1)
+            #time.sleep(0.1)
             agent.conquer()
         elif agent.state == 'fortifying':
-            time.sleep(0.1)
+            #time.sleep(0.1)
             agent.fortify()
         elif agent.state == 'mobilizing':
-            time.sleep(0.1)
+            #time.sleep(0.1)
             agent.mobilize()
         elif agent.state == 'winner':
             print('I am surprised this actualy worked')

@@ -15,10 +15,13 @@ class Player:
         self.id = id
         self.countries_owned = []
         self.n_new_troops = n_new_troops
+        self.n_total_troops = 0
         self.state = None
         self.control = Control()
         self.connection_matrix = {}
         self.border_countries = {}
+        #self.continents_owned = []
+
     
     # Falta fazer se o atacante dominar o territorio
     def attack(self, n_dice : int, attacker : Country, attacked : Country):
@@ -84,6 +87,7 @@ class Player:
         if(country.owner == self):
             if(n_troops <= self.n_new_troops):
                 country.n_troops += n_troops
+                self.n_total_troops += n_troops
                 self.n_new_troops -= n_troops
             else:
                 print("Player", self.id, "is trying to set", n_troops, "troops, but has only", self.n_new_troops)

@@ -124,15 +124,23 @@ class Game:
             self._create_border_countries(player)
             self._create_connection_matrix(player)
 
+        if player.id == 1:
+            enemy = self.player_2
+        else:
+            enemy = self.player_1
+
         data = {
             "count": player.data_count,
             "id": player.id,
             "n_new_troops": player.n_new_troops,
+            "n_total_troops": player.n_total_troops,
+            "enemy_n_total_troops": enemy.n_total_troops,
             "state": player.state,
             "countries_owned": countries_owned_names,
             "countries_data": countries_data,
             "border_countries": player.border_countries,
             "connection_matrix": player.connection_matrix
+            #"continents_owned" : player.continents_owned
         }
 
         json_data = json.dumps(data, indent = 4)
@@ -226,7 +234,11 @@ class Game:
         for country_owned in enemy.countries_owned:
             if country_owned.name == player.control.call_data["command"]["args"][2]:
                 attacked = country_owned
-                break
+                break        
+            
+        attacker_n_troops_before_attack = attacker.n_troops
+
+        attacked_n_troops_before_attack = attacked.n_troops
         
         if(attacker == None):
             print("Player", id, "does not own any country named", player.control.call_data["command"]["args"][1])
@@ -234,6 +246,13 @@ class Game:
             print("Player", enemy.id, "does not own any country named", player.control.call_data["command"]["args"][2])
         else:
             has_won = player.attack(player.control.call_data["command"]["args"][0], attacker, attacked)
+
+            attacker_troops_after = attacker_n_troops_before_attack - attacker.n_troops
+            attacked_troops_after = attacked_n_troops_before_attack - attacked.n_troops
+
+            attacker.owner.n_total_troops -= attacker_troops_after
+            attacked.owner.n_total_troops -= attacked_troops_after
+
             if has_won:
                 enemy.countries_owned.remove(attacked)
                 player.countries_owned.append(attacked)
@@ -246,6 +265,7 @@ class Game:
                     self.winner = player
             
             self.map_changed = has_won
+
 
     def _move_troops(self, player : Player, enemy : Player):
         from_country = None
@@ -327,7 +347,7 @@ class Game:
             enemy = self.player_1
 
         call_data = player.control.call_data
-        print(call_data)
+        #print(call_data)
                 
         if call_data["command"]["name"] == "attack":
             self._attack(player, enemy)
@@ -344,22 +364,22 @@ class Game:
         else:
             print("Player", id, "is trying to use a command that does not exist (", call_data["command"]["name"], ")")
 
-        print('Player:', id, 'count:', call_data['count'])
+        #print('Player:', id, 'count:', call_data['count'])
                 
 if __name__ == '__main__':
 
     game = Game()
 
     game.create_command_files()
-    print("Criou os command files")
+    #print("Criou os command files")
 
     game.random_draft()
-    print("Distribuiu os paises")
+    #print("Distribuiu os paises")
 
     game._distribute_new_troops(game.active_player)
 
     game.update_players_data()
-    print("Atualizou os dados dos player")
+    #print("Atualizou os dados dos player")
 
     while True:
         game.wait_for_agent(game.active_player)
@@ -367,7 +387,7 @@ if __name__ == '__main__':
         game.execute_player_action(game.active_player.id)
 
         if game.winner != None:
-            print('Player', game.winner.id, "win!")
+            #print('Player', game.winner.id, "win!")
             
             if game.winner.id == 1:
                 game.player_1.state = "winner"
@@ -376,5 +396,8 @@ if __name__ == '__main__':
             elif game.winner.id == 2:
                 game.player_1.state = "loser"
                 game.player_2.state = "winner"
+            
+            game.update_players_data()
+            break
                 
         game.update_players_data()

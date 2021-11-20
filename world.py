@@ -1,16 +1,32 @@
+from continent import Continent
 from country import Country
 
 class World:
     def __init__(self):
-        
-        north_america = ["Alaska", "Alberta", "Ontario", "Western America", "Eastern America", "Quebec", "Central America", "Greenland", "Northwest America"]
-        south_america = ["Brazil", "Venezuela", "Peru", "Argentina"]
-        australia = ["Western Australia", "Eastern Australia", "Indoneasia", "Papua New Guinea"]
-        europe = ["Ukraine", "Skandinavia", "Iceland", "Great Britain", "Northern Europe", "Western Europe", "Southern Europe"]
-        asia = ["Yakutsk", "Siberia", "Kamchatka", "Irkutsk", "Ural", "Japan", "Mongolia", "China", "Middle East", "India", "Siam", "Afganistan"]
-        africa = ["Congo", "East Africa", "Egypt", "Madagascar", "North Africa", "South Africa"]
 
-        continents = [north_america, south_america, australia, europe, asia, africa]
+        north_america = Continent("North America")
+        south_america = Continent("South America")
+        australia = Continent("Australia")
+        europe = Continent("Europe")
+        asia = Continent("Asia")
+        africa = Continent("Africa")
+
+        north_america.extra_armies = 5
+        south_america.extra_armies = 2
+        australia.extra_armies = 2
+        europe.extra_armies = 5
+        asia.extra_armies = 7
+        africa.extra_armies = 3
+
+        
+        north_america.countries = ["Alaska", "Alberta", "Ontario", "Western America", "Eastern America", "Quebec", "Central America", "Greenland", "Northwest America"]
+        south_america.countries = ["Brazil", "Venezuela", "Peru", "Argentina"]
+        australia.countries = ["Western Australia", "Eastern Australia", "Indoneasia", "Papua New Guinea"]
+        europe.countries = ["Ukraine", "Skandinavia", "Iceland", "Great Britain", "Northern Europe", "Western Europe", "Southern Europe"]
+        asia.countries = ["Yakutsk", "Siberia", "Kamchatka", "Irkutsk", "Ural", "Japan", "Mongolia", "China", "Middle East", "India", "Siam", "Afganistan"]
+        africa.countries = ["Congo", "East Africa", "Egypt", "Madagascar", "North Africa", "South Africa"]
+
+        continents = [north_america.countries, south_america.countries, australia.countries, europe.countries, asia.countries, africa.countries]
 
         self.country_dict = {}
         self.country_list = []
