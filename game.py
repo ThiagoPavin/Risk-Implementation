@@ -1,5 +1,6 @@
 from world import World
 from player import Player
+from country import Country
 
 import json
 import random
@@ -35,7 +36,7 @@ class Game:
         n_new_troops = int(n_countries_owned // 3)
         player.n_new_troops += n_new_troops
 
-    def _create_call_data(self, id: int, call_count: int):
+    def _create_call_data(self, id: int, call_count: int) -> str:
         data = {
             'id': id,
             'count': call_count,
@@ -49,7 +50,7 @@ class Game:
         
         return json_data
 
-    def _update_json_file(self, path : str, json_data):
+    def _update_json_file(self, path : str, json_data : str):
         with open(path, "w") as outfile:
             outfile.write(json_data)
 
@@ -65,7 +66,7 @@ class Game:
 
         return countries_data
 
-    def _is_connected(self, country_1, country_2, countries_visited) -> bool:
+    def _is_connected(self, country_1 : Country, country_2 : Country, countries_visited : list) -> bool:
         for neighbour in country_1.neighbours:
             if neighbour in countries_visited:
                 continue
@@ -80,7 +81,7 @@ class Game:
                         return False
         return False
 
-    def _create_connection_matrix(self, player):
+    def _create_connection_matrix(self, player : Player):
         player.connection_matrix = {} 
 
         for country in player.countries_owned:
@@ -114,7 +115,7 @@ class Game:
                         else:
                             player.border_countries[country.name].append(neighbour.name)
 
-    def _create_player_data(self, countries_data, player):
+    def _create_player_data(self, countries_data : dict, player : Player) -> str:
         countries_owned_names = [country.name for country in player.countries_owned]
 
         player.data_count += 1
@@ -183,7 +184,7 @@ class Game:
         self._update_json_file(self.player_1.control.data_path, p1_json_data)
         self._update_json_file(self.player_2.control.data_path, p2_json_data)
 
-    def wait_for_agent(self, player):
+    def wait_for_agent(self, player : Player):
         
         current_time = os.path.getmtime(player.control.call_path)
 
@@ -213,7 +214,7 @@ class Game:
 
             player.control.last_m_time = current_time
 
-    def _attack(self, player, enemy):
+    def _attack(self, player : Player, enemy : Player):
         attacker = None
         attacked = None
 
@@ -246,7 +247,7 @@ class Game:
             
             self.map_changed = has_won
 
-    def _move_troops(self, player, enemy):
+    def _move_troops(self, player : Player, enemy : Player):
         from_country = None
         to_country = None
 
@@ -286,7 +287,7 @@ class Game:
             elif player.state == "fortifying":
                 self._pass_turn(player, enemy) 
 
-    def _set_new_troops(self, player):
+    def _set_new_troops(self, player : Player):
         country = None
 
         for country_owned in player.countries_owned:
@@ -299,7 +300,7 @@ class Game:
         else:
             player.set_new_troops(player.control.call_data["command"]["args"][0], country)
 
-    def _pass_turn(self, player, enemy):        
+    def _pass_turn(self, player : Player, enemy : Player):        
         if player.state == "mobilizing":
             player.state = "attacking"
 
@@ -315,7 +316,7 @@ class Game:
         elif player.state == "conquering":
             print("Player", id, "cannot pass_turn during a conquering state")
 
-    def execute_player_action(self, id):
+    def execute_player_action(self, id : int):
         self.map_changed = False
 
         if id == 1:

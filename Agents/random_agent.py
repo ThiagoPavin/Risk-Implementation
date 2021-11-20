@@ -46,38 +46,65 @@ class Agent():
             if self._file_changed(last_count):
                 break
 
+    # def attack(self):
+    #     for _ in range(10):
+    #         random_country_name = random.choice(self.player_data['countries_owned'])
+
+    #         #print(random_country_name, self.player_data['countries_data'][random_country_name]['owner'])
+
+    #         if self.player_data['countries_data'][random_country_name]['n_troops'] > 1:
+    #             for neighbour_name in self.player_data['countries_data'][random_country_name]['neighbours']:
+    #                 if self.player_data['countries_data'][neighbour_name]['owner'] != self.id:
+    #                     attack_chance = random.randrange(100)
+    #                     if attack_chance < 60:
+    #                         # print(neighbour_name, self.player_data['countries_data'][neighbour_name]['owner'])
+    #                         # print(self.player_data['countries_data'][neighbour_name]['owner'] != self.id)
+    #                         action = 'attack'
+    #                         if self.player_data['countries_data'][random_country_name]['n_troops'] == 2:
+    #                             n_dice = 1
+    #                         elif self.player_data['countries_data'][random_country_name]['n_troops'] == 3:
+    #                             n_dice = 2
+    #                         elif self.player_data['countries_data'][random_country_name]['n_troops'] >= 4:
+    #                             n_dice = 3
+    #                         args = [n_dice, random_country_name, neighbour_name]
+    #                         self._call_action(action, args)
+    #                         return
+    #                     else:
+    #                         continue
+            
+    #         pass_chance = random.randrange(10)
+    #         if pass_chance >= 9:
+    #             self._pass_turn()
+    #             return
+            
+    #     self._pass_turn()
+
     def attack(self):
-        for _ in range(10):
-            random_country_name = random.choice(self.player_data['countries_owned'])
 
-            #print(random_country_name, self.player_data['countries_data'][random_country_name]['owner'])
+        list_borders = list(self.player_data['border_countries'].keys())
 
-            if self.player_data['countries_data'][random_country_name]['n_troops'] > 1:
-                for neighbour_name in self.player_data['countries_data'][random_country_name]['neighbours']:
-                    if self.player_data['countries_data'][neighbour_name]['owner'] != self.id:
-                        attack_chance = random.randrange(100)
-                        if attack_chance < 60:
-                            # print(neighbour_name, self.player_data['countries_data'][neighbour_name]['owner'])
-                            # print(self.player_data['countries_data'][neighbour_name]['owner'] != self.id)
-                            action = 'attack'
-                            if self.player_data['countries_data'][random_country_name]['n_troops'] == 2:
-                                n_dice = 1
-                            elif self.player_data['countries_data'][random_country_name]['n_troops'] == 3:
-                                n_dice = 2
-                            elif self.player_data['countries_data'][random_country_name]['n_troops'] >= 4:
-                                n_dice = 3
-                            args = [n_dice, random_country_name, neighbour_name]
-                            self._call_action(action, args)
-                            return
-                        else:
-                            continue
-            
-            pass_chance = random.randrange(10)
-            if pass_chance >= 9:
-                self._pass_turn()
-                return
-            
-        self._pass_turn()            
+        random.shuffle(list_borders)
+
+        for country_name in list_borders:
+            for enemy_name in self.player_data['border_countries'][country_name]:
+
+                if self.player_data['countries_data'][country_name]['n_troops'] > 1:
+                    #if self.player_data['countries_data'][country_name]['n_troops'] > self.player_data['countries_data'][enemy_name]['n_troops']:
+
+                    action = 'attack'
+
+                    if self.player_data['countries_data'][country_name]['n_troops'] == 2:
+                        n_dice = 1
+                    elif self.player_data['countries_data'][country_name]['n_troops'] == 3:
+                        n_dice = 2
+                    elif self.player_data['countries_data'][country_name]['n_troops'] >= 4:
+                        n_dice = 3
+                    
+                    args = [n_dice, country_name, enemy_name]
+                    self._call_action(action, args)
+                    return
+
+        self._pass_turn()             
 
     def mobilize(self):
         """
@@ -196,16 +223,16 @@ if __name__ == "__main__":
         if agent.state == 'waiting':
             agent.wait_game()
         elif agent.state == 'attacking':
-            time.sleep(0.5)
+            time.sleep(0.1)
             agent.attack()
         elif agent.state == 'conquering':
-            time.sleep(0.5)
+            time.sleep(0.1)
             agent.conquer()
         elif agent.state == 'fortifying':
-            time.sleep(0.5)
+            time.sleep(0.1)
             agent.fortify()
         elif agent.state == 'mobilizing':
-            time.sleep(0.5)
+            time.sleep(0.1)
             agent.mobilize()
         elif agent.state == 'winner':
             print('I am surprised this actualy worked')
