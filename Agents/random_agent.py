@@ -224,16 +224,16 @@ if __name__ == "__main__":
         if agent.state == 'waiting':
             agent.wait_game()
         elif agent.state == 'attacking':
-            #time.sleep(0.1)
+            time.sleep(0.1)
             agent.attack()
         elif agent.state == 'conquering':
-            #time.sleep(0.1)
+            time.sleep(0.1)
             agent.conquer()
         elif agent.state == 'fortifying':
-            #time.sleep(0.1)
+            time.sleep(0.1)
             agent.fortify()
         elif agent.state == 'mobilizing':
-            #time.sleep(0.1)
+            time.sleep(0.1)
             agent.mobilize()
         elif agent.state == 'winner':
             print('I am surprised this actualy worked')

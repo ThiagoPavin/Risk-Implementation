@@ -20,8 +20,6 @@ class Player:
         self.control = Control()
         self.connection_matrix = {}
         self.border_countries = {}
-        #self.continents_owned = []
-
     
     # Falta fazer se o atacante dominar o territorio
     def attack(self, n_dice : int, attacker : Country, attacked : Country):

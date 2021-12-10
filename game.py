@@ -31,11 +31,24 @@ class Game:
 
         self.map_changed = True
 
+        self.continents_owners = {}
+
     def _distribute_new_troops(self, player : Player):
         n_countries_owned = len(player.countries_owned)
         n_new_troops = int(n_countries_owned // 3)
         n_new_troops = max(n_new_troops, 3)
+
+        bonus_troops = 0
+
+        for continent in self.world.continents:
+            if continent.owner == player:
+                bonus_troops += continent.extra_armies
+        
+        print("Total bonus = ", bonus_troops)
+
+        n_new_troops += bonus_troops
         player.n_new_troops += n_new_troops
+        
 
     def _create_call_data(self, id: int, call_count: int) -> str:
         data = {
@@ -116,6 +129,19 @@ class Game:
                         else:
                             player.border_countries[country.name].append(neighbour.name)
 
+    def _create_continents_owners(self):
+
+        continents_owners_dict = {}
+
+        for continent in self.world.continents:
+            continent.update_continent_owner()
+            if continent.owner != None:
+                continents_owners_dict[continent.name] = continent.owner.id
+            else:
+                continents_owners_dict[continent.name] = continent.owner
+
+        self.continents_owners = continents_owners_dict
+
     def _create_player_data(self, countries_data : dict, player : Player) -> str:
         countries_owned_names = [country.name for country in player.countries_owned]
 
@@ -124,6 +150,8 @@ class Game:
         if self.map_changed:
             self._create_border_countries(player)
             self._create_connection_matrix(player)
+            self._create_continents_owners()
+
 
         if player.id == 1:
             enemy = self.player_2
@@ -140,8 +168,8 @@ class Game:
             "countries_owned": countries_owned_names,
             "countries_data": countries_data,
             "border_countries": player.border_countries,
-            "connection_matrix": player.connection_matrix
-            #"continents_owned" : player.continents_owned
+            "connection_matrix": player.connection_matrix,
+            "continents_owners" : self.continents_owners
         }
 
         json_data = json.dumps(data, indent = 4)
@@ -348,7 +376,7 @@ class Game:
             enemy = self.player_1
 
         call_data = player.control.call_data
-        #print(call_data)
+        print(call_data)
                 
         if call_data["command"]["name"] == "attack":
             self._attack(player, enemy)

@@ -19,22 +19,32 @@ class World:
         africa.extra_armies = 3
 
         
-        north_america.countries = ["Alaska", "Alberta", "Ontario", "Western America", "Eastern America", "Quebec", "Central America", "Greenland", "Northwest America"]
-        south_america.countries = ["Brazil", "Venezuela", "Peru", "Argentina"]
-        australia.countries = ["Western Australia", "Eastern Australia", "Indoneasia", "Papua New Guinea"]
-        europe.countries = ["Ukraine", "Skandinavia", "Iceland", "Great Britain", "Northern Europe", "Western Europe", "Southern Europe"]
-        asia.countries = ["Yakutsk", "Siberia", "Kamchatka", "Irkutsk", "Ural", "Japan", "Mongolia", "China", "Middle East", "India", "Siam", "Afganistan"]
-        africa.countries = ["Congo", "East Africa", "Egypt", "Madagascar", "North Africa", "South Africa"]
+        north_america_countries = ["Alaska", "Alberta", "Ontario", "Western America", "Eastern America", "Quebec", "Central America", "Greenland", "Northwest America"]
+        south_america_countries = ["Brazil", "Venezuela", "Peru", "Argentina"]
+        australia_countries = ["Western Australia", "Eastern Australia", "Indoneasia", "Papua New Guinea"]
+        europe_countries = ["Ukraine", "Skandinavia", "Iceland", "Great Britain", "Northern Europe", "Western Europe", "Southern Europe"]
+        asia_countries = ["Yakutsk", "Siberia", "Kamchatka", "Irkutsk", "Ural", "Japan", "Mongolia", "China", "Middle East", "India", "Siam", "Afganistan"]
+        africa_countries = ["Congo", "East Africa", "Egypt", "Madagascar", "North Africa", "South Africa"]
 
-        continents = [north_america.countries, south_america.countries, australia.countries, europe.countries, asia.countries, africa.countries]
+        continents_countries = [north_america_countries, south_america_countries, australia_countries, europe_countries, asia_countries, africa_countries]
+
+        self.continents = [north_america, south_america, australia, europe, asia, africa]
 
         self.country_dict = {}
         self.country_list = []
 
-        for continent in continents:
+        i = 0
+
+        for continent in continents_countries:
+            
             for country in continent:
                 self.country_dict[country] = Country(country)
                 self.country_list.append(self.country_dict[country])
+                self.continents[i].countries.append(self.country_dict[country])
+
+            i += 1
+
+            
 
         # North America
         self.country_dict["Alaska"].add_neighbours([self.country_dict["Northwest America"], self.country_dict["Alberta"], self.country_dict["Kamchatka"]])
