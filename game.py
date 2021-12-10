@@ -34,6 +34,7 @@ class Game:
     def _distribute_new_troops(self, player : Player):
         n_countries_owned = len(player.countries_owned)
         n_new_troops = int(n_countries_owned // 3)
+        n_new_troops = max(n_new_troops, 3)
         player.n_new_troops += n_new_troops
 
     def _create_call_data(self, id: int, call_count: int) -> str:
