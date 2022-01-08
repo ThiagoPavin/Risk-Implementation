@@ -17,7 +17,6 @@ class World:
         europe.extra_armies = 5
         asia.extra_armies = 7
         africa.extra_armies = 3
-
         
         north_america_countries = ["Alaska", "Alberta", "Ontario", "Western America", "Eastern America", "Quebec", "Central America", "Greenland", "Northwest America"]
         south_america_countries = ["Brazil", "Venezuela", "Peru", "Argentina"]
@@ -43,8 +42,6 @@ class World:
                 self.continents[i].countries.append(self.country_dict[country])
 
             i += 1
-
-            
 
         # North America
         self.country_dict["Alaska"].add_neighbours([self.country_dict["Northwest America"], self.country_dict["Alberta"], self.country_dict["Kamchatka"]])

@@ -31,8 +31,6 @@ class Game:
 
         self.map_changed = True
 
-        self.continents_owners = {}
-
     def _distribute_new_troops(self, player : Player):
         n_countries_owned = len(player.countries_owned)
         n_new_troops = int(n_countries_owned // 3)
@@ -68,6 +66,8 @@ class Game:
         with open(path, "w") as outfile:
             outfile.write(json_data)
 
+    # TODO
+    # Make a _update_countries_data where it updates only the changeable data
     def _create_countries_data(self) -> dict:
         countries_data = {} 
 
@@ -79,6 +79,25 @@ class Game:
             }
 
         return countries_data
+
+    # TODO
+    # Make a _update_continents_data where it updates only the changeable data
+    def _create_continents_data(self) -> dict:
+        continents_data = {}
+
+        for continent in self.world.continents:
+            continent_owner = None
+            
+            if continent.owner != None:
+                continent_owner = continent.owner.id
+
+            continents_data[continent.name] = {
+                "owner": continent_owner,
+                "extra_armies": continent.extra_armies,
+                "countries": [country.name for country in continent.countries]
+            }
+
+        return continents_data
 
     def _is_connected(self, country_1 : Country, country_2 : Country, countries_visited : list) -> bool:
         for neighbour in country_1.neighbours:
@@ -129,20 +148,7 @@ class Game:
                         else:
                             player.border_countries[country.name].append(neighbour.name)
 
-    def _create_continents_owners(self):
-
-        continents_owners_dict = {}
-
-        for continent in self.world.continents:
-            continent.update_continent_owner()
-            if continent.owner != None:
-                continents_owners_dict[continent.name] = continent.owner.id
-            else:
-                continents_owners_dict[continent.name] = continent.owner
-
-        self.continents_owners = continents_owners_dict
-
-    def _create_player_data(self, countries_data : dict, player : Player) -> str:
+    def _create_player_data(self, continents_data: dict, countries_data : dict, player : Player) -> str:
         countries_owned_names = [country.name for country in player.countries_owned]
 
         player.data_count += 1
@@ -150,8 +156,6 @@ class Game:
         if self.map_changed:
             self._create_border_countries(player)
             self._create_connection_matrix(player)
-            self._create_continents_owners()
-
 
         if player.id == 1:
             enemy = self.player_2
@@ -169,7 +173,7 @@ class Game:
             "countries_data": countries_data,
             "border_countries": player.border_countries,
             "connection_matrix": player.connection_matrix,
-            "continents_owners" : self.continents_owners
+            "continents_data": continents_data
         }
 
         json_data = json.dumps(data, indent = 4)
@@ -214,9 +218,10 @@ class Game:
     def update_players_data(self):
 
         countries_data = self._create_countries_data()
+        continents_data = self._create_continents_data()
 
-        p1_json_data = self._create_player_data(countries_data, self.player_1)
-        p2_json_data = self._create_player_data(countries_data, self.player_2)
+        p1_json_data = self._create_player_data(continents_data, countries_data, self.player_1)
+        p2_json_data = self._create_player_data(continents_data, countries_data, self.player_2)
 
         self._update_json_file(self.player_1.control.data_path, p1_json_data)
         self._update_json_file(self.player_2.control.data_path, p2_json_data)
@@ -294,7 +299,6 @@ class Game:
                     self.winner = player
             
             self.map_changed = has_won
-
 
     def _move_troops(self, player : Player, enemy : Player):
         from_country = None
