@@ -1,1 +1,1 @@
-{"id": 2, "count": 100, "command": {"name": "pass_turn", "args": []}}
+{"id": 2, "count": 220, "command": {"name": "attack", "args": [3, "North Africa", "Congo"]}}

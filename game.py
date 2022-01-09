@@ -13,6 +13,8 @@ class Game:
         self.player_1 = Player(1,40)
         self.player_2 = Player(2,40)
 
+        self.turn = 0
+
         self.player_1.state = "mobilizing"
         self.player_2.state = "waiting"
 
@@ -30,6 +32,13 @@ class Game:
         self.winner = None
 
         self.map_changed = True
+
+        self.unity_world_data_path = "Logs\\Unity_world_data.json"
+        self.unity_commands_data_path = "Logs\\Unity_commands_data.json"
+
+        self.unity_commands_dict = []
+
+        self.unity_commands_data = []
 
     def _distribute_new_troops(self, player : Player):
         n_countries_owned = len(player.countries_owned)
@@ -298,6 +307,15 @@ class Game:
                 if len(player.countries_owned) == 42:
                     self.winner = player
             
+            self.unity_commands_dict.append( {
+                "id" : player.id,
+                "tipo" : "attack",
+                "name_out" : attacker.name,
+                "out" : attacker_troops_after,
+                "name_in" : attacked.name,
+                "in" : attacked_troops_after,
+                "conquered" : has_won
+            } )
             self.map_changed = has_won
 
     def _move_troops(self, player : Player, enemy : Player):
@@ -338,7 +356,17 @@ class Game:
                 player.state = "attacking"
 
             elif player.state == "fortifying":
-                self._pass_turn(player, enemy) 
+                self._pass_turn(player, enemy)
+
+        self.unity_commands_dict.append( {
+                "id" : player.id,
+                "tipo" : "move_troops",
+                "name_out" : player.control.call_data["command"]["args"][1],
+                "out" : player.control.call_data["command"]["args"][0],
+                "name_in" : player.control.call_data["command"]["args"][2],
+                "in" : player.control.call_data["command"]["args"][0],
+                "conquered" : False
+        } ) 
 
     def _set_new_troops(self, player : Player):
         country = None
@@ -353,7 +381,28 @@ class Game:
         else:
             player.set_new_troops(player.control.call_data["command"]["args"][0], country)
 
-    def _pass_turn(self, player : Player, enemy : Player):        
+        self.unity_commands_dict.append( {
+                "id" : player.id,
+                "tipo" : "set_new_troops",
+                "name_out" : "N",
+                "out" : 0,
+                "name_in" : player.control.call_data["command"]["args"][1],
+                "in" : player.control.call_data["command"]["args"][0],
+                "conquered" : False
+        } ) 
+
+    def _pass_turn(self, player : Player, enemy : Player):
+
+        self.unity_commands_dict.append( {
+                "id" : player.id,
+                "tipo" : "pass_turn",
+                "name_out" : "N",
+                "out" : 0,
+                "name_in" : "N",
+                "in" : 0,
+                "conquered" : False
+        } ) 
+
         if player.state == "mobilizing":
             player.state = "attacking"
 
@@ -362,12 +411,22 @@ class Game:
 
         elif player.state == "fortifying":
             player.state = "waiting"
+            self.turn = self.turn + 1
             self.active_player = enemy
             enemy.state = "mobilizing"
             self._distribute_new_troops(self.active_player)
 
+            self.unity_commands_data.append( {
+                "turn_number": self.turn,
+                "calls": self.unity_commands_dict
+            } )
+
+            self.unity_commands_dict = []
+
         elif player.state == "conquering":
             print("Player", id, "cannot pass_turn during a conquering state")
+
+        
 
     def execute_player_action(self, id : int):
         self.map_changed = False
@@ -398,6 +457,35 @@ class Game:
             print("Player", id, "is trying to use a command that does not exist (", call_data["command"]["name"], ")")
 
         #print('Player:', id, 'count:', call_data['count'])
+
+
+    def create_unity_world_data_log(self):
+
+        countries_dict = []
+
+        for country in self.world.country_list:
+            countries_dict.append( {
+                "name": country.name,
+                "owner": country.owner.id,
+                "n_troops": country.n_troops
+            } )
+
+        countries = {"countries" : countries_dict}
+
+        json_data = json.dumps(countries, indent = 4)
+
+        with open(self.unity_world_data_path, "w") as outfile:
+            outfile.write(json_data)
+
+
+    def create_unity_commands_log(self):
+
+        data = {"turns" : self.unity_commands_data}
+
+        json_data = json.dumps(data, indent = 4)
+
+        with open(self.unity_commands_data_path, "w") as outfile:
+            outfile.write(json_data)
                 
 if __name__ == '__main__':
 
@@ -414,7 +502,9 @@ if __name__ == '__main__':
     game.update_players_data()
     #print("Atualizou os dados dos player")
 
-    while True:
+    game.create_unity_world_data_log()
+
+    while game.turn < 150:
         game.wait_for_agent(game.active_player)
 
         game.execute_player_action(game.active_player.id)
@@ -434,3 +524,5 @@ if __name__ == '__main__':
             break
                 
         game.update_players_data()
+    
+    game.create_unity_commands_log()

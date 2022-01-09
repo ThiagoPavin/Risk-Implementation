@@ -21,7 +21,6 @@ class Player:
         self.connection_matrix = {}
         self.border_countries = {}
     
-    # Falta fazer se o atacante dominar o territorio
     def attack(self, n_dice : int, attacker : Country, attacked : Country):
         if attacker.owner == self:
             if attacked.owner != self:
