@@ -2,9 +2,11 @@ from world import World
 from player import Player
 from country import Country
 
+import time
 import json
 import random
 import os
+from pathlib import Path
 
 class Game:
     def __init__(self):
@@ -21,11 +23,11 @@ class Game:
         self.player_1.control.call_count = 0
         self.player_2.control.call_count = 0
         
-        self.player_1.control.call_path = "Calls\player_1.json"
-        self.player_2.control.call_path = "Calls\player_2.json"
+        self.player_1.control.call_path = Path("Calls/player_1.json")
+        self.player_2.control.call_path = Path("Calls/player_2.json")
         
-        self.player_1.control.data_path = "Logs\player_1.json"
-        self.player_2.control.data_path = "Logs\player_2.json"
+        self.player_1.control.data_path = Path("Logs/player_1.json")
+        self.player_2.control.data_path = Path("Logs/player_2.json")
 
         self.active_player = self.player_1
 
@@ -51,7 +53,7 @@ class Game:
             if continent.owner == player:
                 bonus_troops += continent.extra_armies
         
-        print("Total bonus = ", bonus_troops)
+        #print("Total bonus = ", bonus_troops)
 
         n_new_troops += bonus_troops
         player.n_new_troops += n_new_troops
@@ -453,7 +455,7 @@ class Game:
             enemy = self.player_1
 
         call_data = player.control.call_data
-        print(call_data)
+        #print(call_data)
                 
         if call_data["command"]["name"] == "attack":
             self._attack(player, enemy)
@@ -502,6 +504,7 @@ class Game:
             outfile.write(json_data)
                 
 if __name__ == '__main__':
+    start_time = time.time()
 
     game = Game()
 
@@ -524,7 +527,8 @@ if __name__ == '__main__':
         game.execute_player_action(game.active_player.id)
 
         if game.winner != None:
-            #print('Player', game.winner.id, "win!")
+            total_time = time.time() - start_time
+            print('Winner:', game.winner.id, "Troops:", game.winner.n_total_troops, "Time:", total_time)
             
             if game.winner.id == 1:
                 game.player_1.state = "winner"
