@@ -310,10 +310,11 @@ class Game:
             self.unity_commands_dict.append( {
                 "id" : player.id,
                 "tipo" : "attack",
+                "dice_number" : player.control.call_data["command"]["args"][0],
                 "name_out" : attacker.name,
-                "out" : attacker_troops_after,
+                "out_number" : attacker_troops_after,
                 "name_in" : attacked.name,
-                "in" : attacked_troops_after,
+                "in_number" : attacked_troops_after,
                 "conquered" : has_won
             } )
             self.map_changed = has_won
@@ -354,19 +355,29 @@ class Game:
 
             if player.state == "conquering":
                 player.state = "attacking"
+                self.unity_commands_dict.append( {
+                    "id" : player.id,
+                    "tipo" : "move_troops",
+                    "dice_number" : 0,
+                    "name_out" : player.control.call_data["command"]["args"][1],
+                    "out_number" : player.control.call_data["command"]["args"][0],
+                    "name_in" : player.control.call_data["command"]["args"][2],
+                    "in_number" : player.control.call_data["command"]["args"][0],
+                    "conquered" : False
+                } ) 
 
             elif player.state == "fortifying":
+                self.unity_commands_dict.append( {
+                    "id" : player.id,
+                    "tipo" : "move_troops",
+                    "dice_number" : 0,
+                    "name_out" : player.control.call_data["command"]["args"][1],
+                    "out_number" : player.control.call_data["command"]["args"][0],
+                    "name_in" : player.control.call_data["command"]["args"][2],
+                    "in_number" : player.control.call_data["command"]["args"][0],
+                    "conquered" : False
+                } )
                 self._pass_turn(player, enemy)
-
-        self.unity_commands_dict.append( {
-                "id" : player.id,
-                "tipo" : "move_troops",
-                "name_out" : player.control.call_data["command"]["args"][1],
-                "out" : player.control.call_data["command"]["args"][0],
-                "name_in" : player.control.call_data["command"]["args"][2],
-                "in" : player.control.call_data["command"]["args"][0],
-                "conquered" : False
-        } ) 
 
     def _set_new_troops(self, player : Player):
         country = None
@@ -384,24 +395,15 @@ class Game:
         self.unity_commands_dict.append( {
                 "id" : player.id,
                 "tipo" : "set_new_troops",
+                "dice_number" : 0,
                 "name_out" : "N",
-                "out" : 0,
+                "out_number" : 0,
                 "name_in" : player.control.call_data["command"]["args"][1],
-                "in" : player.control.call_data["command"]["args"][0],
+                "in_number" : player.control.call_data["command"]["args"][0],
                 "conquered" : False
         } ) 
 
     def _pass_turn(self, player : Player, enemy : Player):
-
-        self.unity_commands_dict.append( {
-                "id" : player.id,
-                "tipo" : "pass_turn",
-                "name_out" : "N",
-                "out" : 0,
-                "name_in" : "N",
-                "in" : 0,
-                "conquered" : False
-        } ) 
 
         if player.state == "mobilizing":
             player.state = "attacking"
@@ -410,6 +412,18 @@ class Game:
             player.state = "fortifying"
 
         elif player.state == "fortifying":
+
+            self.unity_commands_dict.append( {
+                "id" : player.id,
+                "tipo" : "pass_turn",
+                "dice_number" : 0,
+                "name_out" : "N",
+                "out_number" : 0,
+                "name_in" : "N",
+                "in_number" : 0,
+                "conquered" : False
+            } ) 
+            
             player.state = "waiting"
             self.turn = self.turn + 1
             self.active_player = enemy
@@ -521,8 +535,14 @@ if __name__ == '__main__':
                 game.player_2.state = "winner"
             
             game.update_players_data()
+            game.turn += 1
             break
                 
         game.update_players_data()
+
+    game.unity_commands_data.append( {
+        "turn_number": game.turn,
+        "calls": game.unity_commands_dict
+    } )
     
     game.create_unity_commands_log()
