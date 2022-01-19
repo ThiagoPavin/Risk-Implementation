@@ -121,8 +121,6 @@ class Game:
                     countries_visited.append(neighbour)
                     if self._is_connected(neighbour, country_2, countries_visited):
                         return True
-                    else:
-                        return False
         return False
 
     def _create_connection_matrix(self, player : Player):
@@ -159,6 +157,17 @@ class Game:
                         else:
                             player.border_countries[country.name].append(neighbour.name)
 
+    def _update_continents_owners(self):
+        for continent in self.world.continents:
+            continent_owner = None
+            for country in continent.countries:
+                if continent_owner == None:
+                    continent_owner = country.owner
+                elif country.owner != continent_owner:
+                    continent_owner = None
+                    break
+            continent.owner = continent_owner
+            
     def _create_player_data(self, continents_data: dict, countries_data : dict, player : Player) -> str:
         countries_owned_names = [country.name for country in player.countries_owned]
 
@@ -280,16 +289,15 @@ class Game:
             if country_owned.name == player.control.call_data["command"]["args"][2]:
                 attacked = country_owned
                 break        
-            
-        attacker_n_troops_before_attack = attacker.n_troops
-
-        attacked_n_troops_before_attack = attacked.n_troops
         
         if(attacker == None):
-            print("Player", id, "does not own any country named", player.control.call_data["command"]["args"][1])
+            print("Player", player.id, "does not own any country named", player.control.call_data["command"]["args"][1])
         elif(attacked == None):
             print("Player", enemy.id, "does not own any country named", player.control.call_data["command"]["args"][2])
         else:
+            attacker_n_troops_before_attack = attacker.n_troops
+            attacked_n_troops_before_attack = attacked.n_troops
+
             has_won = player.attack(player.control.call_data["command"]["args"][0], attacker, attacked)
 
             attacker_troops_after = attacker_n_troops_before_attack - attacker.n_troops
@@ -308,6 +316,8 @@ class Game:
 
                 if len(player.countries_owned) == 42:
                     self.winner = player
+
+                self._update_continents_owners()
             
             self.unity_commands_dict.append( {
                 "id" : player.id,
@@ -349,9 +359,9 @@ class Game:
                 break
         
         if(from_country == None):
-            print("Player", id, "does not own any country named", player.control.call_data["command"]["args"][1])
+            print("Player", player.id, "does not own any country named", player.control.call_data["command"]["args"][1])
         elif(to_country == None):
-            print("Player", id, "does not own any country named", player.control.call_data["command"]["args"][2])
+            print("Player", enemy.id, "does not own any country named", player.control.call_data["command"]["args"][2])
         else:
             player.move_troops(player.control.call_data["command"]["args"][0], from_country, to_country)
 
@@ -390,7 +400,7 @@ class Game:
                 break
         
         if(country == None):
-            print("Player", id, "does not own any country named", player.control.call_data["command"]["args"][1])
+            print("Player", player.id, "does not own any country named", player.control.call_data["command"]["args"][1])
         else:
             player.set_new_troops(player.control.call_data["command"]["args"][0], country)
 
@@ -440,11 +450,11 @@ class Game:
             self.unity_commands_dict = []
 
         elif player.state == "conquering":
-            print("Player", id, "cannot pass_turn during a conquering state")
+            print("Player", player.id, "cannot pass_turn during a conquering state")
 
         
 
-    def execute_player_action(self, id : int):
+    def execute_player_action(self, id : int, log: bool):
         self.map_changed = False
 
         if id == 1:
@@ -455,7 +465,8 @@ class Game:
             enemy = self.player_1
 
         call_data = player.control.call_data
-        #print(call_data)
+        if log:
+            print(call_data)
                 
         if call_data["command"]["name"] == "attack":
             self._attack(player, enemy)
@@ -506,6 +517,8 @@ class Game:
 if __name__ == '__main__':
     start_time = time.time()
 
+    log = True
+
     game = Game()
 
     game.create_command_files()
@@ -516,6 +529,8 @@ if __name__ == '__main__':
 
     game._distribute_new_troops(game.active_player)
 
+    game._update_continents_owners()
+
     game.update_players_data()
     #print("Atualizou os dados dos player")
 
@@ -524,7 +539,7 @@ if __name__ == '__main__':
     while game.turn < 150:
         game.wait_for_agent(game.active_player)
 
-        game.execute_player_action(game.active_player.id)
+        game.execute_player_action(game.active_player.id, log)
 
         if game.winner != None:
             total_time = time.time() - start_time

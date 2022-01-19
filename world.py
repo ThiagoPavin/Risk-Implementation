@@ -51,7 +51,7 @@ class World:
         self.country_dict["Western America"].add_neighbours([self.country_dict["Alberta"], self.country_dict["Ontario"], self.country_dict["Central America"], self.country_dict["Eastern America"]])
         self.country_dict["Eastern America"].add_neighbours([self.country_dict["Ontario"], self.country_dict["Quebec"], self.country_dict["Central America"], self.country_dict["Western America"]])
         self.country_dict["Quebec"].add_neighbours([self.country_dict["Greenland"], self.country_dict["Ontario"], self.country_dict["Eastern America"]])
-        self.country_dict["Central America"].add_neighbours([self.country_dict["Eastern America"], self.country_dict["Eastern America"], self.country_dict["Venezuela"]])
+        self.country_dict["Central America"].add_neighbours([self.country_dict["Eastern America"], self.country_dict["Western America"], self.country_dict["Venezuela"]])
         self.country_dict["Greenland"].add_neighbours([self.country_dict["Ontario"], self.country_dict["Quebec"], self.country_dict["Northwest America"], self.country_dict["Iceland"]])
 
         # South America
@@ -72,13 +72,13 @@ class World:
         self.country_dict["Iceland"].add_neighbours([self.country_dict["Skandinavia"], self.country_dict["Great Britain"], self.country_dict["Greenland"]])
         self.country_dict["Great Britain"].add_neighbours([self.country_dict["Iceland"], self.country_dict["Skandinavia"], self.country_dict["Northern Europe"], self.country_dict["Western Europe"]])
         self.country_dict["Northern Europe"].add_neighbours([self.country_dict["Great Britain"], self.country_dict["Skandinavia"], self.country_dict["Ukraine"], self.country_dict["Western Europe"], self.country_dict["Southern Europe"]])
-        self.country_dict["Western Europe"].add_neighbours([self.country_dict["Great Britain"], self.country_dict["Northern Europe"], self.country_dict["Southern Europe"]])
+        self.country_dict["Western Europe"].add_neighbours([self.country_dict["Great Britain"], self.country_dict["Northern Europe"], self.country_dict["Southern Europe"], self.country_dict["North Africa"]])
         self.country_dict["Southern Europe"].add_neighbours([self.country_dict["Ukraine"], self.country_dict["Middle East"], self.country_dict["Egypt"], self.country_dict["North Africa"], self.country_dict["Western Europe"], self.country_dict["Northern Europe"]])
 
         # Asia
         self.country_dict["Yakutsk"].add_neighbours([self.country_dict["Siberia"], self.country_dict["Irkutsk"], self.country_dict["Kamchatka"]])
         self.country_dict["Siberia"].add_neighbours([self.country_dict["Yakutsk"], self.country_dict["Irkutsk"], self.country_dict["Mongolia"], self.country_dict["China"], self.country_dict["Ural"]])
-        self.country_dict["Kamchatka"].add_neighbours([self.country_dict["Yakutsk"], self.country_dict["Irkutsk"], self.country_dict["Japan"], self.country_dict["Mongolia"]])
+        self.country_dict["Kamchatka"].add_neighbours([self.country_dict["Yakutsk"], self.country_dict["Irkutsk"], self.country_dict["Japan"], self.country_dict["Mongolia"], self.country_dict["Alaska"]])
         self.country_dict["Irkutsk"].add_neighbours([self.country_dict["Siberia"], self.country_dict["Kamchatka"], self.country_dict["Yakutsk"], self.country_dict["Mongolia"]])
         self.country_dict["Ural"].add_neighbours([self.country_dict["Ukraine"], self.country_dict["Afganistan"], self.country_dict["China"], self.country_dict["Siberia"]])
         self.country_dict["Japan"].add_neighbours([self.country_dict["Kamchatka"], self.country_dict["Mongolia"]])
@@ -94,5 +94,5 @@ class World:
         self.country_dict["East Africa"].add_neighbours([self.country_dict["Egypt"], self.country_dict["North Africa"], self.country_dict["Congo"], self.country_dict["South Africa"], self.country_dict["Madagascar"], self.country_dict["Middle East"]])
         self.country_dict["Egypt"].add_neighbours([self.country_dict["North Africa"], self.country_dict["East Africa"], self.country_dict["Southern Europe"], self.country_dict["Middle East"]])
         self.country_dict["Madagascar"].add_neighbours([self.country_dict["South Africa"], self.country_dict["East Africa"]])
-        self.country_dict["North Africa"].add_neighbours([self.country_dict["Egypt"], self.country_dict["East Africa"], self.country_dict["Congo"], self.country_dict["Brazil"], self.country_dict["Western Europe"]])
+        self.country_dict["North Africa"].add_neighbours([self.country_dict["Egypt"], self.country_dict["East Africa"], self.country_dict["Congo"], self.country_dict["Brazil"], self.country_dict["Western Europe"], self.country_dict["Southern Europe"]])
         self.country_dict["South Africa"].add_neighbours([self.country_dict["Congo"], self.country_dict["East Africa"], self.country_dict["Madagascar"]])
