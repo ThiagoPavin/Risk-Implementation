@@ -35,12 +35,14 @@ class Game:
 
         self.map_changed = True
 
-        self.unity_world_data_path = "Logs\\Unity_world_data.json"
-        self.unity_commands_data_path = "Logs\\Unity_commands_data.json"
+        self.unity_world_data_path = Path("Logs/Unity_world_data.json")
+        self.unity_commands_data_path = Path("Logs/Unity_commands_data.json")
 
         self.unity_commands_dict = []
 
         self.unity_commands_data = []
+
+        self.log = False
 
     def _distribute_new_troops(self, player : Player):
         n_countries_owned = len(player.countries_owned)
@@ -454,7 +456,7 @@ class Game:
 
         
 
-    def execute_player_action(self, id : int, log: bool):
+    def execute_player_action(self, id : int):
         self.map_changed = False
 
         if id == 1:
@@ -465,8 +467,10 @@ class Game:
             enemy = self.player_1
 
         call_data = player.control.call_data
-        if log:
+
+        if self.log:
             print(call_data)
+            pass
                 
         if call_data["command"]["name"] == "attack":
             self._attack(player, enemy)
@@ -514,12 +518,18 @@ class Game:
         with open(self.unity_commands_data_path, "w") as outfile:
             outfile.write(json_data)
                 
+def print_game_result(game: Game, total_time: int, path: str):
+    text = '\nWinner: ' + str(game.winner.id) + ", Winner Troops: " + str(game.winner.n_total_troops) + ", Player Sate json Writes: " + str(game.player_1.data_count) + ", P1 Call json Writes: " + str(game.player_1.control.call_count) + ", P2 Call json Writes: " + str(game.player_2.control.call_count) + ", Time: " + str(total_time) 
+
+    with open(path, 'a') as openfile:
+        openfile.write(text)
+
 if __name__ == '__main__':
     start_time = time.time()
 
-    log = True
-
     game = Game()
+
+    game.log = False
 
     game.create_command_files()
     #print("Criou os command files")
@@ -539,11 +549,18 @@ if __name__ == '__main__':
     while game.turn < 150:
         game.wait_for_agent(game.active_player)
 
-        game.execute_player_action(game.active_player.id, log)
+        game.execute_player_action(game.active_player.id)
 
         if game.winner != None:
             total_time = time.time() - start_time
-            print('Winner:', game.winner.id, "Troops:", game.winner.n_total_troops, "Time:", total_time)
+            print('Winner:', game.winner.id, 
+                    "P1 Troops:", game.player_1.n_total_troops,
+                    "Player Sate json Writes:", game.player_1.data_count,
+                    "P1 Call json Writes:", game.player_1.control.call_count,
+                    "P2 Call json Writes:", game.player_2.control.call_count,
+                    "Time:", total_time)
+
+            print_game_result(game, total_time, "montecarlo_vs_cluster.txt")
             
             if game.winner.id == 1:
                 game.player_1.state = "winner"

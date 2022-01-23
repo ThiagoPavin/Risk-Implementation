@@ -23,10 +23,57 @@ agent_2=$2
 
 pids=()
 
+echo "$agent_1 vs $agent_2" 
+
 for i in $(seq "$3");
 do
     echo "Executing $i..."
     python $agent_1 1 &
+    pids[0]=$!
+    python $agent_2 2 &
+    pids[1]=$!
+    python game.py &
+    pids[2]=$!
+
+    wait 
+done
+
+echo "$agent_2 vs $agent_1"
+
+for i in $(seq "$3");
+do
+    echo "Executing $i..."
+    python $agent_2 1 &
+    pids[0]=$!
+    python $agent_1 2 &
+    pids[1]=$!
+    python game.py &
+    pids[2]=$!
+
+    wait 
+done
+
+echo "$agent_1 vs $agent_1"
+
+for i in $(seq "$3");
+do
+    echo "Executing $i..."
+    python $agent_1 1 &
+    pids[0]=$!
+    python $agent_1 2 &
+    pids[1]=$!
+    python game.py &
+    pids[2]=$!
+
+    wait 
+done
+
+echo "$agent_2 vs $agent_2"
+
+for i in $(seq "$3");
+do
+    echo "Executing $i..."
+    python $agent_2 1 &
     pids[0]=$!
     python $agent_2 2 &
     pids[1]=$!
