@@ -1,1 +1,1 @@
-{"id": 1, "count": 47, "command": {"name": "move_troops", "args": [0, "Eastern Australia", "Papua New Guinea"]}}
+{"id": 1, "count": 120, "command": {"name": "attack", "args": [3, "Ontario", "Alberta"]}}
