@@ -2,6 +2,7 @@ from world import World
 from player import Player
 from country import Country
 
+import sys
 import time
 import json
 import random
@@ -521,10 +522,20 @@ class Game:
 def print_game_result(game: Game, total_time: int, path: str):
     text = '\nWinner: ' + str(game.winner.id) + ", Winner Troops: " + str(game.winner.n_total_troops) + ", Player Sate json Writes: " + str(game.player_1.data_count) + ", P1 Call json Writes: " + str(game.player_1.control.call_count) + ", P2 Call json Writes: " + str(game.player_2.control.call_count) + ", Time: " + str(total_time) 
 
+    path = Path('Risk-Agents/tests/' + path)
+
     with open(path, 'a') as openfile:
         openfile.write(text)
 
 if __name__ == '__main__':
+    is_testing = False
+    path = None
+
+    args = sys.argv
+    if len(args) == 2:
+        path = args[1]
+        is_testing = True
+
     start_time = time.time()
 
     game = Game()
@@ -560,7 +571,8 @@ if __name__ == '__main__':
                     "P2 Call json Writes:", game.player_2.control.call_count,
                     "Time:", total_time)
 
-            print_game_result(game, total_time, "montecarlo_vs_cluster.txt")
+            if is_testing:
+                print_game_result(game, total_time, path)
             
             if game.winner.id == 1:
                 game.player_1.state = "winner"
