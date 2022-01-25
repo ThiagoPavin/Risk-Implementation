@@ -9,7 +9,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Western America",
+                    "name_in": "Brazil",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -19,7 +19,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Western America",
+                    "name_in": "Venezuela",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -29,7 +29,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Western America",
+                    "name_in": "Brazil",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -39,7 +39,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Western America",
+                    "name_in": "Venezuela",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -49,7 +49,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Western America",
+                    "name_in": "Brazil",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -59,7 +59,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Western America",
+                    "name_in": "Venezuela",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -69,88 +69,18 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Western America",
+                    "name_in": "Brazil",
                     "in_number": 1,
                     "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Iceland",
-                    "out_number": 1,
-                    "name_in": "Skandinavia",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Great Britain",
-                    "out_number": 1,
-                    "name_in": "Skandinavia",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Great Britain",
-                    "out_number": 1,
-                    "name_in": "Skandinavia",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Eastern Australia",
-                    "out_number": 2,
-                    "name_in": "Papua New Guinea",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Kamchatka",
-                    "out_number": 0,
-                    "name_in": "Mongolia",
-                    "in_number": 1,
-                    "conquered": true
                 },
                 {
                     "id": 1,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Kamchatka",
+                    "name_out": "Argentina",
                     "out_number": 0,
-                    "name_in": "Mongolia",
+                    "name_in": "Venezuela",
                     "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Kamchatka",
-                    "out_number": 0,
-                    "name_in": "Alaska",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 1,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Kamchatka",
-                    "out_number": 2,
-                    "name_in": "Alaska",
-                    "in_number": 2,
                     "conquered": false
                 },
                 {
@@ -174,7 +104,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Siberia",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -184,7 +114,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Siberia",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -194,7 +124,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Siberia",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -204,7 +134,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Siberia",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -214,7 +144,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Siberia",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -224,7 +154,17 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Siberia",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Siberia",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -232,137 +172,7 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Venezuela",
-                    "out_number": 0,
-                    "name_in": "Brazil",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Venezuela",
-                    "out_number": 6,
-                    "name_in": "Brazil",
-                    "in_number": 6,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Brazil",
-                    "out_number": 0,
-                    "name_in": "North Africa",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Brazil",
-                    "out_number": 0,
-                    "name_in": "North Africa",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "North Africa",
-                    "out_number": 1,
-                    "name_in": "Southern Europe",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Afganistan",
-                    "out_number": 0,
-                    "name_in": "Ukraine",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Afganistan",
-                    "out_number": 0,
-                    "name_in": "Ukraine",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Afganistan",
-                    "out_number": 0,
-                    "name_in": "Ural",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Afganistan",
-                    "out_number": 0,
-                    "name_in": "Ural",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Afganistan",
-                    "out_number": 0,
-                    "name_in": "China",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Afganistan",
-                    "out_number": 0,
-                    "name_in": "China",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Ukraine",
-                    "out_number": 0,
-                    "name_in": "Southern Europe",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Ukraine",
-                    "out_number": 0,
-                    "name_in": "Southern Europe",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "China",
+                    "name_out": "Siberia",
                     "out_number": 1,
                     "name_in": "Mongolia",
                     "in_number": 0,
@@ -371,10 +181,10 @@
                 {
                     "id": 2,
                     "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Southern Europe",
+                    "dice_number": 3,
+                    "name_out": "Siberia",
                     "out_number": 0,
-                    "name_in": "Middle East",
+                    "name_in": "Mongolia",
                     "in_number": 1,
                     "conquered": true
                 },
@@ -382,9 +192,109 @@
                     "id": 2,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Southern Europe",
+                    "name_out": "Siberia",
+                    "out_number": 11,
+                    "name_in": "Mongolia",
+                    "in_number": 11,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Mongolia",
                     "out_number": 0,
-                    "name_in": "Middle East",
+                    "name_in": "China",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Mongolia",
+                    "out_number": 10,
+                    "name_in": "China",
+                    "in_number": 10,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "China",
+                    "out_number": 1,
+                    "name_in": "Afganistan",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "China",
+                    "out_number": 1,
+                    "name_in": "Afganistan",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "China",
+                    "out_number": 0,
+                    "name_in": "Afganistan",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "China",
+                    "out_number": 0,
+                    "name_in": "Afganistan",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Kamchatka",
+                    "out_number": 0,
+                    "name_in": "Japan",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Kamchatka",
+                    "out_number": 6,
+                    "name_in": "Japan",
+                    "in_number": 6,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "North Africa",
+                    "out_number": 0,
+                    "name_in": "Egypt",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "North Africa",
+                    "out_number": 0,
+                    "name_in": "Egypt",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -392,10 +302,10 @@
                     "id": 2,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Peru",
-                    "out_number": 6,
-                    "name_in": "Siberia",
-                    "in_number": 6,
+                    "name_out": "Japan",
+                    "out_number": 8,
+                    "name_in": "Congo",
+                    "in_number": 8,
                     "conquered": false
                 },
                 {
@@ -419,7 +329,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Alaska",
+                    "name_in": "Venezuela",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -429,7 +339,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Alaska",
+                    "name_in": "Brazil",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -439,7 +349,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Alaska",
+                    "name_in": "Venezuela",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -449,7 +359,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Alaska",
+                    "name_in": "Brazil",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -459,7 +369,27 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Alaska",
+                    "name_in": "Venezuela",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Venezuela",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -467,9 +397,19 @@
                     "id": 1,
                     "tipo": "attack",
                     "dice_number": 2,
-                    "name_out": "Mongolia",
-                    "out_number": 2,
-                    "name_in": "Siberia",
+                    "name_out": "Western Europe",
+                    "out_number": 1,
+                    "name_in": "North Africa",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Western Europe",
+                    "out_number": 1,
+                    "name_in": "North Africa",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -477,9 +417,9 @@
                     "id": 1,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Western America",
+                    "name_out": "Venezuela",
                     "out_number": 0,
-                    "name_in": "Ontario",
+                    "name_in": "Central America",
                     "in_number": 1,
                     "conquered": true
                 },
@@ -487,19 +427,19 @@
                     "id": 1,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Western America",
-                    "out_number": 10,
-                    "name_in": "Ontario",
-                    "in_number": 10,
+                    "name_out": "Venezuela",
+                    "out_number": 0,
+                    "name_in": "Central America",
+                    "in_number": 0,
                     "conquered": false
                 },
                 {
                     "id": 1,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Alaska",
+                    "name_out": "Papua New Guinea",
                     "out_number": 0,
-                    "name_in": "Northwest America",
+                    "name_in": "Western Australia",
                     "in_number": 1,
                     "conquered": true
                 },
@@ -507,19 +447,49 @@
                     "id": 1,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Alaska",
-                    "out_number": 6,
-                    "name_in": "Northwest America",
-                    "in_number": 6,
+                    "name_out": "Papua New Guinea",
+                    "out_number": 5,
+                    "name_in": "Western Australia",
+                    "in_number": 5,
                     "conquered": false
                 },
                 {
                     "id": 1,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Ontario",
+                    "name_out": "Western Australia",
+                    "out_number": 1,
+                    "name_in": "Indoneasia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Western Australia",
+                    "out_number": 1,
+                    "name_in": "Indoneasia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Western Australia",
+                    "out_number": 1,
+                    "name_in": "Indoneasia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Western Australia",
                     "out_number": 0,
-                    "name_in": "Alberta",
+                    "name_in": "Indoneasia",
                     "in_number": 1,
                     "conquered": true
                 },
@@ -527,9 +497,79 @@
                     "id": 1,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Ontario",
+                    "name_out": "Western Australia",
                     "out_number": 0,
-                    "name_in": "Alberta",
+                    "name_in": "Indoneasia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Indoneasia",
+                    "out_number": 1,
+                    "name_in": "Siam",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Indoneasia",
+                    "out_number": 1,
+                    "name_in": "Siam",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Central America",
+                    "out_number": 0,
+                    "name_in": "Eastern America",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Central America",
+                    "out_number": 0,
+                    "name_in": "Eastern America",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Brazil",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Brazil",
+                    "out_number": 4,
+                    "name_in": "North Africa",
+                    "in_number": 4,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Eastern America",
+                    "out_number": 1,
+                    "name_in": "Quebec",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -537,10 +577,10 @@
                     "id": 1,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Ontario",
-                    "out_number": 9,
-                    "name_in": "Irkutsk",
-                    "in_number": 9,
+                    "name_out": "Venezuela",
+                    "out_number": 4,
+                    "name_in": "Western America",
+                    "in_number": 4,
                     "conquered": false
                 },
                 {
@@ -564,7 +604,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Kamchatka",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -574,7 +614,27 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Western Europe",
+                    "name_in": "Southern Europe",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Middle East",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Siam",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -594,7 +654,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Afganistan",
+                    "name_in": "Ukraine",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -604,7 +664,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "East Africa",
+                    "name_in": "Egypt",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -614,7 +674,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Skandinavia",
+                    "name_in": "Kamchatka",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -624,17 +684,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "South Africa",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "China",
+                    "name_in": "Southern Europe",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -650,151 +700,201 @@
                 },
                 {
                     "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Siberia",
-                    "out_number": 0,
-                    "name_in": "Yakutsk",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
+                    "tipo": "set_new_troops",
                     "dice_number": 0,
-                    "name_out": "Siberia",
+                    "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Yakutsk",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Siberia",
-                    "out_number": 1,
-                    "name_in": "Mongolia",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Siberia",
-                    "out_number": 0,
-                    "name_in": "Mongolia",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Siberia",
-                    "out_number": 0,
-                    "name_in": "Mongolia",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Yakutsk",
-                    "out_number": 1,
-                    "name_in": "Kamchatka",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Afganistan",
-                    "out_number": 1,
-                    "name_in": "India",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "East Africa",
-                    "out_number": 0,
-                    "name_in": "Madagascar",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "East Africa",
-                    "out_number": 0,
-                    "name_in": "Madagascar",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Skandinavia",
-                    "out_number": 0,
-                    "name_in": "Iceland",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Skandinavia",
-                    "out_number": 0,
-                    "name_in": "Iceland",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Western Europe",
-                    "out_number": 0,
-                    "name_in": "Great Britain",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Western Europe",
-                    "out_number": 0,
-                    "name_in": "Great Britain",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "China",
-                    "out_number": 1,
                     "name_in": "Siam",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northern Europe",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Ukraine",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Egypt",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Kamchatka",
+                    "out_number": 0,
+                    "name_in": "Alaska",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Kamchatka",
+                    "out_number": 0,
+                    "name_in": "Alaska",
                     "in_number": 0,
                     "conquered": false
                 },
                 {
                     "id": 2,
                     "tipo": "attack",
-                    "dice_number": 1,
+                    "dice_number": 2,
+                    "name_out": "Southern Europe",
+                    "out_number": 0,
+                    "name_in": "Western Europe",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Southern Europe",
+                    "out_number": 0,
+                    "name_in": "Western Europe",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
                     "name_out": "Middle East",
                     "out_number": 1,
-                    "name_in": "India",
+                    "name_in": "East Africa",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Siam",
+                    "out_number": 0,
+                    "name_in": "Indoneasia",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Siam",
+                    "out_number": 0,
+                    "name_in": "Indoneasia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Northern Europe",
+                    "out_number": 0,
+                    "name_in": "Great Britain",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Northern Europe",
+                    "out_number": 0,
+                    "name_in": "Great Britain",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Ukraine",
+                    "out_number": 1,
+                    "name_in": "Skandinavia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Egypt",
+                    "out_number": 0,
+                    "name_in": "East Africa",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Egypt",
+                    "out_number": 0,
+                    "name_in": "East Africa",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Congo",
+                    "out_number": 0,
+                    "name_in": "South Africa",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Congo",
+                    "out_number": 5,
+                    "name_in": "South Africa",
+                    "in_number": 5,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "South Africa",
+                    "out_number": 0,
+                    "name_in": "Madagascar",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "South Africa",
+                    "out_number": 0,
+                    "name_in": "Madagascar",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -802,9 +902,9 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 1,
-                    "name_out": "Yakutsk",
+                    "name_out": "Western Europe",
                     "out_number": 1,
-                    "name_in": "Irkutsk",
+                    "name_in": "North Africa",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -812,9 +912,49 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 1,
-                    "name_out": "Mongolia",
+                    "name_out": "Indoneasia",
+                    "out_number": 0,
+                    "name_in": "Papua New Guinea",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Indoneasia",
+                    "out_number": 0,
+                    "name_in": "Papua New Guinea",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "East Africa",
                     "out_number": 1,
-                    "name_in": "Irkutsk",
+                    "name_in": "North Africa",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Great Britain",
+                    "out_number": 1,
+                    "name_in": "Skandinavia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Ukraine",
+                    "out_number": 1,
+                    "name_in": "Skandinavia",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -822,10 +962,10 @@
                     "id": 2,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Brazil",
-                    "out_number": 5,
-                    "name_in": "Siberia",
-                    "in_number": 5,
+                    "name_out": "China",
+                    "out_number": 7,
+                    "name_in": "Congo",
+                    "in_number": 7,
                     "conquered": false
                 },
                 {
@@ -849,7 +989,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Greenland",
+                    "name_in": "Ontario",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -859,7 +999,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Central America",
+                    "name_in": "Eastern America",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -869,7 +1009,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Kamchatka",
+                    "name_in": "Ontario",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -879,7 +1019,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Greenland",
+                    "name_in": "Eastern America",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -889,7 +1029,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Central America",
+                    "name_in": "Ontario",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -899,37 +1039,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Kamchatka",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Greenland",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Central America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Kamchatka",
+                    "name_in": "Eastern America",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -937,29 +1047,9 @@
                     "id": 1,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Central America",
-                    "out_number": 2,
-                    "name_in": "Venezuela",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Central America",
-                    "out_number": 1,
-                    "name_in": "Venezuela",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Irkutsk",
+                    "name_out": "Iceland",
                     "out_number": 0,
-                    "name_in": "Mongolia",
+                    "name_in": "Greenland",
                     "in_number": 1,
                     "conquered": true
                 },
@@ -967,20 +1057,170 @@
                     "id": 1,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Irkutsk",
+                    "name_out": "Iceland",
                     "out_number": 6,
-                    "name_in": "Mongolia",
+                    "name_in": "Greenland",
                     "in_number": 6,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Ontario",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Ontario",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Western Australia",
+                    "out_number": 1,
+                    "name_in": "Papua New Guinea",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Northwest America",
+                    "out_number": 2,
+                    "name_in": "Alaska",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Greenland",
+                    "out_number": 1,
+                    "name_in": "Quebec",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Greenland",
+                    "out_number": 1,
+                    "name_in": "Quebec",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Greenland",
+                    "out_number": 0,
+                    "name_in": "Quebec",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Greenland",
+                    "out_number": 0,
+                    "name_in": "Quebec",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "North Africa",
+                    "out_number": 1,
+                    "name_in": "Western Europe",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "North Africa",
+                    "out_number": 0,
+                    "name_in": "Western Europe",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "North Africa",
+                    "out_number": 0,
+                    "name_in": "Western Europe",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Western Europe",
+                    "out_number": 0,
+                    "name_in": "Southern Europe",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Western Europe",
+                    "out_number": 0,
+                    "name_in": "Southern Europe",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Southern Europe",
+                    "out_number": 0,
+                    "name_in": "Ukraine",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Southern Europe",
+                    "out_number": 0,
+                    "name_in": "Ukraine",
+                    "in_number": 0,
                     "conquered": false
                 },
                 {
                     "id": 1,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Northwest America",
-                    "out_number": 8,
-                    "name_in": "Irkutsk",
-                    "in_number": 8,
+                    "name_out": "Eastern America",
+                    "out_number": 3,
+                    "name_in": "Iceland",
+                    "in_number": 3,
                     "conquered": false
                 },
                 {
@@ -1004,7 +1244,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Afganistan",
+                    "name_in": "Alberta",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1014,7 +1254,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "China",
+                    "name_in": "Ural",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1024,7 +1264,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Middle East",
+                    "name_in": "Egypt",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1034,7 +1274,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Yakutsk",
+                    "name_in": "Indoneasia",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1044,7 +1284,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Iceland",
+                    "name_in": "East Africa",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1054,7 +1294,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Papua New Guinea",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1064,17 +1304,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Afganistan",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "China",
+                    "name_in": "Alberta",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1094,7 +1324,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Yakutsk",
+                    "name_in": "Ural",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1104,7 +1334,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Iceland",
+                    "name_in": "Egypt",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1114,297 +1344,177 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Afganistan",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "China",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Middle East",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Yakutsk",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Iceland",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Venezuela",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Afganistan",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Venezuela",
-                    "out_number": 0,
-                    "name_in": "Central America",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Venezuela",
-                    "out_number": 0,
-                    "name_in": "Central America",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Afganistan",
-                    "out_number": 0,
-                    "name_in": "India",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Afganistan",
-                    "out_number": 0,
-                    "name_in": "India",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "China",
-                    "out_number": 0,
-                    "name_in": "Siam",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "China",
-                    "out_number": 0,
-                    "name_in": "Siam",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Papua New Guinea",
-                    "out_number": 0,
-                    "name_in": "Eastern Australia",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Papua New Guinea",
-                    "out_number": 0,
-                    "name_in": "Eastern Australia",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Central America",
-                    "out_number": 0,
-                    "name_in": "Eastern America",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Central America",
-                    "out_number": 0,
-                    "name_in": "Eastern America",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Siberia",
-                    "out_number": 1,
-                    "name_in": "Irkutsk",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Siberia",
-                    "out_number": 0,
-                    "name_in": "Irkutsk",
-                    "in_number": 2,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Siberia",
-                    "out_number": 0,
-                    "name_in": "Irkutsk",
-                    "in_number": 2,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Siberia",
-                    "out_number": 0,
-                    "name_in": "Irkutsk",
-                    "in_number": 2,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Siberia",
-                    "out_number": 0,
-                    "name_in": "Irkutsk",
-                    "in_number": 2,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Siberia",
-                    "out_number": 1,
-                    "name_in": "Irkutsk",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Yakutsk",
-                    "out_number": 0,
-                    "name_in": "Kamchatka",
-                    "in_number": 2,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Yakutsk",
-                    "out_number": 0,
-                    "name_in": "Kamchatka",
-                    "in_number": 2,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Yakutsk",
-                    "out_number": 0,
-                    "name_in": "Kamchatka",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Kamchatka",
-                    "out_number": 1,
                     "name_in": "Alaska",
-                    "in_number": 0,
+                    "in_number": 1,
                     "conquered": false
                 },
                 {
                     "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Irkutsk",
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Mongolia",
-                    "in_number": 2,
+                    "name_in": "Indoneasia",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "East Africa",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Papua New Guinea",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Alberta",
+                    "out_number": 1,
+                    "name_in": "Ontario",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Middle East",
+                    "out_number": 1,
+                    "name_in": "Southern Europe",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Ural",
+                    "out_number": 0,
+                    "name_in": "Ukraine",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Ural",
+                    "out_number": 0,
+                    "name_in": "Ukraine",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Egypt",
+                    "out_number": 1,
+                    "name_in": "Southern Europe",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Alaska",
+                    "out_number": 1,
+                    "name_in": "Northwest America",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Indoneasia",
+                    "out_number": 0,
+                    "name_in": "Western Australia",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Indoneasia",
+                    "out_number": 0,
+                    "name_in": "Western Australia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Papua New Guinea",
+                    "out_number": 1,
+                    "name_in": "Eastern Australia",
+                    "in_number": 0,
                     "conquered": false
                 },
                 {
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Irkutsk",
-                    "out_number": 2,
-                    "name_in": "Mongolia",
+                    "name_out": "Congo",
+                    "out_number": 1,
+                    "name_in": "North Africa",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Congo",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 2,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Congo",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "North Africa",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "North Africa",
+                    "out_number": 0,
+                    "name_in": "Brazil",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -1412,9 +1522,9 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 1,
-                    "name_out": "Irkutsk",
+                    "name_out": "Alberta",
                     "out_number": 1,
-                    "name_in": "Mongolia",
+                    "name_in": "Ontario",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -1422,30 +1532,80 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 1,
-                    "name_out": "Kamchatka",
-                    "out_number": 1,
-                    "name_in": "Mongolia",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Eastern America",
-                    "out_number": 1,
-                    "name_in": "Western America",
-                    "in_number": 0,
-                    "conquered": false
+                    "name_out": "Middle East",
+                    "out_number": 0,
+                    "name_in": "Southern Europe",
+                    "in_number": 1,
+                    "conquered": true
                 },
                 {
                     "id": 2,
                     "tipo": "move_troops",
                     "dice_number": 0,
                     "name_out": "Middle East",
-                    "out_number": 3,
-                    "name_in": "Siberia",
-                    "in_number": 3,
+                    "out_number": 0,
+                    "name_in": "Southern Europe",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Alaska",
+                    "out_number": 1,
+                    "name_in": "Northwest America",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Papua New Guinea",
+                    "out_number": 0,
+                    "name_in": "Eastern Australia",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Papua New Guinea",
+                    "out_number": 0,
+                    "name_in": "Eastern Australia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Brazil",
+                    "out_number": 1,
+                    "name_in": "Venezuela",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Ukraine",
+                    "out_number": 1,
+                    "name_in": "Skandinavia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "South Africa",
+                    "out_number": 4,
+                    "name_in": "Alberta",
+                    "in_number": 4,
                     "conquered": false
                 },
                 {
@@ -1469,107 +1629,67 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Western America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Western America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Western America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Mongolia",
-                    "out_number": 0,
-                    "name_in": "Japan",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 1,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Mongolia",
-                    "out_number": 0,
-                    "name_in": "Japan",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Western America",
-                    "out_number": 0,
-                    "name_in": "Central America",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 1,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Western America",
-                    "out_number": 0,
-                    "name_in": "Central America",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Central America",
-                    "out_number": 2,
                     "name_in": "Venezuela",
-                    "in_number": 0,
+                    "in_number": 1,
                     "conquered": false
                 },
                 {
                     "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Mongolia",
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Siberia",
-                    "in_number": 2,
+                    "name_in": "Venezuela",
+                    "in_number": 1,
                     "conquered": false
                 },
                 {
                     "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Mongolia",
-                    "out_number": 1,
-                    "name_in": "Siberia",
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Venezuela",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Venezuela",
                     "in_number": 1,
                     "conquered": false
                 },
                 {
                     "id": 1,
                     "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Venezuela",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Venezuela",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
                     "dice_number": 2,
-                    "name_out": "Mongolia",
+                    "name_out": "Brazil",
                     "out_number": 1,
-                    "name_in": "Siberia",
+                    "name_in": "North Africa",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -1577,9 +1697,69 @@
                     "id": 1,
                     "tipo": "attack",
                     "dice_number": 1,
-                    "name_out": "Mongolia",
-                    "out_number": 1,
-                    "name_in": "Siberia",
+                    "name_out": "Brazil",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Brazil",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Western America",
+                    "out_number": 2,
+                    "name_in": "Alberta",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Western America",
+                    "out_number": 0,
+                    "name_in": "Alberta",
+                    "in_number": 2,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Western America",
+                    "out_number": 0,
+                    "name_in": "Alberta",
+                    "in_number": 2,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Western America",
+                    "out_number": 0,
+                    "name_in": "Alberta",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Western America",
+                    "out_number": 0,
+                    "name_in": "Alberta",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -1587,10 +1767,10 @@
                     "id": 1,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Alberta",
-                    "out_number": 2,
-                    "name_in": "Western America",
-                    "in_number": 2,
+                    "name_out": "Greenland",
+                    "out_number": 3,
+                    "name_in": "Skandinavia",
+                    "in_number": 3,
                     "conquered": false
                 },
                 {
@@ -1614,7 +1794,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Siberia",
+                    "name_in": "Northern Europe",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1624,7 +1804,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "China",
+                    "name_in": "Alaska",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1634,7 +1814,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Irkutsk",
+                    "name_in": "Great Britain",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1644,7 +1824,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Kamchatka",
+                    "name_in": "Ukraine",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1654,7 +1834,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Siberia",
+                    "name_in": "Southern Europe",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1664,7 +1844,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Northern Europe",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1674,7 +1854,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "China",
+                    "name_in": "Egypt",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1684,7 +1864,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Irkutsk",
+                    "name_in": "Alaska",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1694,7 +1874,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Kamchatka",
+                    "name_in": "Great Britain",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1704,7 +1884,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Siberia",
+                    "name_in": "Ukraine",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1714,7 +1894,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Southern Europe",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1724,7 +1904,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "China",
+                    "name_in": "Northern Europe",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1734,7 +1914,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Irkutsk",
+                    "name_in": "Egypt",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1744,7 +1924,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Kamchatka",
+                    "name_in": "Alaska",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1754,7 +1934,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Siberia",
+                    "name_in": "Great Britain",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1764,7 +1944,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "East Africa",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1774,57 +1954,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "China",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Iceland",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Irkutsk",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Kamchatka",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Siberia",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Venezuela",
+                    "name_in": "Ukraine",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -1832,29 +1962,9 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Siberia",
-                    "out_number": 0,
-                    "name_in": "Mongolia",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Siberia",
-                    "out_number": 2,
-                    "name_in": "Mongolia",
-                    "in_number": 2,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Venezuela",
+                    "name_out": "Congo",
                     "out_number": 1,
-                    "name_in": "Central America",
+                    "name_in": "North Africa",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -1862,9 +1972,9 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Venezuela",
+                    "name_out": "Northern Europe",
                     "out_number": 0,
-                    "name_in": "Central America",
+                    "name_in": "Western Europe",
                     "in_number": 1,
                     "conquered": true
                 },
@@ -1872,9 +1982,9 @@
                     "id": 2,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Venezuela",
+                    "name_out": "Northern Europe",
                     "out_number": 0,
-                    "name_in": "Central America",
+                    "name_in": "Western Europe",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -1882,9 +1992,9 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Kamchatka",
+                    "name_out": "Egypt",
                     "out_number": 0,
-                    "name_in": "Alaska",
+                    "name_in": "North Africa",
                     "in_number": 1,
                     "conquered": true
                 },
@@ -1892,10 +2002,10 @@
                     "id": 2,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Kamchatka",
-                    "out_number": 1,
-                    "name_in": "Alaska",
-                    "in_number": 1,
+                    "name_out": "Egypt",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 0,
                     "conquered": false
                 },
                 {
@@ -1913,48 +2023,8 @@
                     "tipo": "attack",
                     "dice_number": 2,
                     "name_out": "Alaska",
-                    "out_number": 1,
+                    "out_number": 0,
                     "name_in": "Northwest America",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Mongolia",
-                    "out_number": 1,
-                    "name_in": "Japan",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Mongolia",
-                    "out_number": 2,
-                    "name_in": "Japan",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Mongolia",
-                    "out_number": 0,
-                    "name_in": "Japan",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Mongolia",
-                    "out_number": 0,
-                    "name_in": "Japan",
                     "in_number": 1,
                     "conquered": true
                 },
@@ -1962,9 +2032,29 @@
                     "id": 2,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Mongolia",
+                    "name_out": "Alaska",
                     "out_number": 0,
-                    "name_in": "Japan",
+                    "name_in": "Northwest America",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "North Africa",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "North Africa",
+                    "out_number": 0,
+                    "name_in": "Brazil",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -1972,7 +2062,7 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 1,
-                    "name_out": "Alaska",
+                    "name_out": "Northwest America",
                     "out_number": 1,
                     "name_in": "Alberta",
                     "in_number": 0,
@@ -1981,10 +2071,10 @@
                 {
                     "id": 2,
                     "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Central America",
-                    "out_number": 2,
-                    "name_in": "Western America",
+                    "dice_number": 1,
+                    "name_out": "Brazil",
+                    "out_number": 1,
+                    "name_in": "Venezuela",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -1992,19 +2082,9 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Iceland",
-                    "out_number": 0,
-                    "name_in": "Greenland",
-                    "in_number": 2,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Iceland",
+                    "name_out": "Great Britain",
                     "out_number": 1,
-                    "name_in": "Greenland",
+                    "name_in": "Skandinavia",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -2012,19 +2092,29 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Iceland",
+                    "name_out": "Ukraine",
                     "out_number": 1,
-                    "name_in": "Greenland",
-                    "in_number": 0,
+                    "name_in": "Skandinavia",
+                    "in_number": 1,
                     "conquered": false
                 },
                 {
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 2,
-                    "name_out": "Iceland",
+                    "name_out": "Great Britain",
+                    "out_number": 1,
+                    "name_in": "Skandinavia",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Ukraine",
                     "out_number": 0,
-                    "name_in": "Greenland",
+                    "name_in": "Skandinavia",
                     "in_number": 1,
                     "conquered": true
                 },
@@ -2032,9 +2122,9 @@
                     "id": 2,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Iceland",
+                    "name_out": "Ukraine",
                     "out_number": 0,
-                    "name_in": "Greenland",
+                    "name_in": "Skandinavia",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -2042,19 +2132,29 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 1,
-                    "name_out": "Greenland",
+                    "name_out": "Great Britain",
                     "out_number": 0,
-                    "name_in": "Quebec",
+                    "name_in": "Iceland",
                     "in_number": 1,
-                    "conquered": true
+                    "conquered": false
                 },
                 {
                     "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Greenland",
-                    "out_number": 0,
-                    "name_in": "Quebec",
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Great Britain",
+                    "out_number": 1,
+                    "name_in": "Iceland",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Skandinavia",
+                    "out_number": 1,
+                    "name_in": "Iceland",
                     "in_number": 0,
                     "conquered": false
                 },
@@ -2062,10 +2162,10 @@
                     "id": 2,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "China",
-                    "out_number": 4,
-                    "name_in": "Eastern America",
-                    "in_number": 4,
+                    "name_out": "East Africa",
+                    "out_number": 3,
+                    "name_in": "Alaska",
+                    "in_number": 3,
                     "conquered": false
                 },
                 {
@@ -2089,7 +2189,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Ontario",
+                    "name_in": "Venezuela",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -2099,7 +2199,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Ontario",
+                    "name_in": "Venezuela",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -2109,48 +2209,58 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Ontario",
+                    "name_in": "Venezuela",
                     "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Iceland",
+                    "out_number": 0,
+                    "name_in": "Skandinavia",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Iceland",
+                    "out_number": 0,
+                    "name_in": "Skandinavia",
+                    "in_number": 0,
                     "conquered": false
                 },
                 {
                     "id": 1,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Ontario",
-                    "out_number": 1,
-                    "name_in": "Eastern America",
+                    "name_out": "Venezuela",
+                    "out_number": 0,
+                    "name_in": "Brazil",
                     "in_number": 1,
-                    "conquered": false
+                    "conquered": true
                 },
                 {
                     "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Ontario",
-                    "out_number": 1,
-                    "name_in": "Eastern America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 1,
-                    "name_out": "Ontario",
-                    "out_number": 1,
-                    "name_in": "Eastern America",
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Venezuela",
+                    "out_number": 0,
+                    "name_in": "Brazil",
                     "in_number": 0,
                     "conquered": false
                 },
                 {
                     "id": 1,
-                    "tipo": "attack",
-                    "dice_number": 2,
-                    "name_out": "Western America",
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Quebec",
                     "out_number": 2,
-                    "name_in": "Eastern America",
-                    "in_number": 0,
+                    "name_in": "Iceland",
+                    "in_number": 2,
                     "conquered": false
                 },
                 {
@@ -2174,7 +2284,157 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Central America",
+                    "name_in": "Northern Europe",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Great Britain",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Ukraine",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northern Europe",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Great Britain",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Ukraine",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northern Europe",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Great Britain",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Ukraine",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northern Europe",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -2194,7 +2454,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Greenland",
+                    "name_in": "Great Britain",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -2204,7 +2464,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Quebec",
+                    "name_in": "Ukraine",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -2214,7 +2474,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Central America",
+                    "name_in": "North Africa",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -2224,257 +2484,7 @@
                     "dice_number": 0,
                     "name_out": "N",
                     "out_number": 0,
-                    "name_in": "Alaska",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Greenland",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Quebec",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Eastern America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Central America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Alaska",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Greenland",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Quebec",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Eastern America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Central America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Alaska",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Greenland",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Quebec",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Eastern America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Central America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Alaska",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Greenland",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Quebec",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Eastern America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Central America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Alaska",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Greenland",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Quebec",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Eastern America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Central America",
-                    "in_number": 1,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "set_new_troops",
-                    "dice_number": 0,
-                    "name_out": "N",
-                    "out_number": 0,
-                    "name_in": "Alaska",
+                    "name_in": "Northwest America",
                     "in_number": 1,
                     "conquered": false
                 },
@@ -2482,7 +2492,17 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 3,
-                    "name_out": "Eastern America",
+                    "name_out": "Northwest America",
+                    "out_number": 1,
+                    "name_in": "Ontario",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Northwest America",
                     "out_number": 0,
                     "name_in": "Ontario",
                     "in_number": 1,
@@ -2492,60 +2512,630 @@
                     "id": 2,
                     "tipo": "move_troops",
                     "dice_number": 0,
-                    "name_out": "Eastern America",
-                    "out_number": 4,
-                    "name_in": "Ontario",
-                    "in_number": 4,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Central America",
-                    "out_number": 1,
-                    "name_in": "Western America",
-                    "in_number": 0,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Alaska",
+                    "name_out": "Northwest America",
                     "out_number": 0,
-                    "name_in": "Northwest America",
-                    "in_number": 1,
-                    "conquered": true
-                },
-                {
-                    "id": 2,
-                    "tipo": "move_troops",
-                    "dice_number": 0,
-                    "name_out": "Alaska",
-                    "out_number": 4,
-                    "name_in": "Northwest America",
-                    "in_number": 4,
-                    "conquered": false
-                },
-                {
-                    "id": 2,
-                    "tipo": "attack",
-                    "dice_number": 3,
-                    "name_out": "Central America",
-                    "out_number": 1,
-                    "name_in": "Western America",
+                    "name_in": "Ontario",
                     "in_number": 0,
                     "conquered": false
                 },
                 {
                     "id": 2,
                     "tipo": "attack",
-                    "dice_number": 3,
+                    "dice_number": 2,
                     "name_out": "Ontario",
+                    "out_number": 0,
+                    "name_in": "Quebec",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Ontario",
+                    "out_number": 0,
+                    "name_in": "Quebec",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Alaska",
+                    "out_number": 2,
+                    "name_in": "Alberta",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Alaska",
+                    "out_number": 2,
+                    "name_in": "Alberta",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Quebec",
+                    "out_number": 1,
+                    "name_in": "Greenland",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Great Britain",
+                    "out_number": 2,
+                    "name_in": "Skandinavia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Northern Europe",
+                    "out_number": 2,
+                    "name_in": "Skandinavia",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Ukraine",
+                    "out_number": 0,
+                    "name_in": "Skandinavia",
+                    "in_number": 2,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Ukraine",
+                    "out_number": 1,
+                    "name_in": "Skandinavia",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Skandinavia",
+                    "out_number": 2,
+                    "name_in": "Iceland",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Great Britain",
+                    "out_number": 0,
+                    "name_in": "Iceland",
+                    "in_number": 2,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Great Britain",
+                    "out_number": 0,
+                    "name_in": "Iceland",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Great Britain",
+                    "out_number": 0,
+                    "name_in": "Iceland",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Iceland",
+                    "out_number": 0,
+                    "name_in": "Greenland",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Iceland",
+                    "out_number": 0,
+                    "name_in": "Greenland",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Congo",
+                    "out_number": 2,
+                    "name_in": "Alaska",
+                    "in_number": 2,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "pass_turn",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "N",
+                    "in_number": 0,
+                    "conquered": false
+                }
+            ]
+        },
+        {
+            "turn_number": 11,
+            "calls": [
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Western America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Eastern America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Western America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Eastern America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
                     "out_number": 0,
                     "name_in": "Alberta",
                     "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Eastern America",
+                    "out_number": 0,
+                    "name_in": "Ontario",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Eastern America",
+                    "out_number": 0,
+                    "name_in": "Ontario",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 2,
+                    "name_out": "Alberta",
+                    "out_number": 1,
+                    "name_in": "Alaska",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Alberta",
+                    "out_number": 1,
+                    "name_in": "Alaska",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "attack",
+                    "dice_number": 1,
+                    "name_out": "Ontario",
+                    "out_number": 0,
+                    "name_in": "Quebec",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Ontario",
+                    "out_number": 0,
+                    "name_in": "Quebec",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Western America",
+                    "out_number": 2,
+                    "name_in": "Alberta",
+                    "in_number": 2,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "pass_turn",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "N",
+                    "in_number": 0,
+                    "conquered": false
+                }
+            ]
+        },
+        {
+            "turn_number": 12,
+            "calls": [
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Greenland",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Alaska",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Greenland",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Alaska",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Greenland",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Alaska",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Greenland",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Alaska",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Greenland",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Alaska",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Greenland",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Alaska",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Greenland",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Alaska",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "North Africa",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Northwest America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Greenland",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Northwest America",
+                    "out_number": 1,
+                    "name_in": "Ontario",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Greenland",
+                    "out_number": 0,
+                    "name_in": "Ontario",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Greenland",
+                    "out_number": 5,
+                    "name_in": "Ontario",
+                    "in_number": 5,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Ontario",
+                    "out_number": 0,
+                    "name_in": "Quebec",
+                    "in_number": 1,
                     "conquered": true
                 },
                 {
@@ -2553,8 +3143,28 @@
                     "tipo": "move_troops",
                     "dice_number": 0,
                     "name_out": "Ontario",
+                    "out_number": 4,
+                    "name_in": "Quebec",
+                    "in_number": 4,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Quebec",
+                    "out_number": 0,
+                    "name_in": "Eastern America",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Quebec",
                     "out_number": 3,
-                    "name_in": "Alberta",
+                    "name_in": "Eastern America",
                     "in_number": 3,
                     "conquered": false
                 },
@@ -2562,9 +3172,629 @@
                     "id": 2,
                     "tipo": "attack",
                     "dice_number": 3,
+                    "name_out": "Eastern America",
+                    "out_number": 0,
+                    "name_in": "Central America",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Eastern America",
+                    "out_number": 2,
+                    "name_in": "Central America",
+                    "in_number": 2,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
                     "name_out": "Central America",
                     "out_number": 0,
                     "name_in": "Western America",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Central America",
+                    "out_number": 1,
+                    "name_in": "Western America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Alaska",
+                    "out_number": 0,
+                    "name_in": "Alberta",
+                    "in_number": 2,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Alaska",
+                    "out_number": 0,
+                    "name_in": "Alberta",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Alaska",
+                    "out_number": 0,
+                    "name_in": "Alberta",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "North Africa",
+                    "out_number": 1,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "North Africa",
+                    "out_number": 1,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "North Africa",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "North Africa",
+                    "out_number": 3,
+                    "name_in": "Brazil",
+                    "in_number": 3,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Brazil",
+                    "out_number": 1,
+                    "name_in": "Peru",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Brazil",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Brazil",
+                    "out_number": 1,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Peru",
+                    "out_number": 0,
+                    "name_in": "Argentina",
+                    "in_number": 1,
+                    "conquered": true
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Peru",
+                    "out_number": 0,
+                    "name_in": "Argentina",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "move_troops",
+                    "dice_number": 0,
+                    "name_out": "Northwest America",
+                    "out_number": 7,
+                    "name_in": "Central America",
+                    "in_number": 7,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "pass_turn",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "N",
+                    "in_number": 0,
+                    "conquered": false
+                }
+            ]
+        },
+        {
+            "turn_number": 13,
+            "calls": [
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Venezuela",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Venezuela",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Venezuela",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 1,
+                    "tipo": "pass_turn",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "N",
+                    "in_number": 0,
+                    "conquered": false
+                }
+            ]
+        },
+        {
+            "turn_number": 14,
+            "calls": [
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Central America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Central America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Central America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Central America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Central America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Central America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Central America",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Brazil",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "set_new_troops",
+                    "dice_number": 0,
+                    "name_out": "N",
+                    "out_number": 0,
+                    "name_in": "Peru",
+                    "in_number": 1,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Central America",
+                    "out_number": 2,
+                    "name_in": "Venezuela",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Brazil",
+                    "out_number": 2,
+                    "name_in": "Venezuela",
+                    "in_number": 0,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Peru",
+                    "out_number": 0,
+                    "name_in": "Venezuela",
+                    "in_number": 2,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Peru",
+                    "out_number": 0,
+                    "name_in": "Venezuela",
+                    "in_number": 2,
+                    "conquered": false
+                },
+                {
+                    "id": 2,
+                    "tipo": "attack",
+                    "dice_number": 3,
+                    "name_out": "Peru",
+                    "out_number": 0,
+                    "name_in": "Venezuela",
                     "in_number": 1,
                     "conquered": true
                 }
