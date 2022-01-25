@@ -1,9 +1,9 @@
 rem Monte Carlo fixed start simulation
 :loop
-	start "agent1" /min python Risk-Agents\monte_carlo_agent.py 1
-	start "agent2" /min python Risk-Agents\cluster_based_agent.py 2
+	start "agent1" /min python Risk-Agents\cluster_based_agent.py 1
+	start "agent2" /min python Risk-Agents\monte_carlo_agent.py 2
 	timeout 1
-	start "game" /min python game.py 1 montecarlo_fixed_vs_cluster.txt
+	start "game" /min python game.py 1 cluster_vs_montecarlo_fixed.txt
 	
 	timeout 20
 

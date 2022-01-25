@@ -1,1 +1,1 @@
-{"id": 2, "count": 274, "command": {"name": "attack", "args": [3, "Western America", "Eastern America"]}}
+{"id": 2, "count": 120, "command": {"name": "move_troops", "args": [2, "Madagascar", "South Africa"]}}
