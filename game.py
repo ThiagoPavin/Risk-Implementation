@@ -238,6 +238,36 @@ class Game:
             country = random.choice(self.player_2.countries_owned)
             self.player_2.set_new_troops(random.randint(0, self.player_2.n_new_troops), country)
 
+    def fixed_draft(self):
+        for i in range(0,42,2):
+            self.player_1.countries_owned.append(self.world.country_list[i])
+            self.player_2.countries_owned.append(self.world.country_list[i+1])
+
+        for country in self.player_1.countries_owned:
+            country.owner = self.player_1
+            self.player_1.set_new_troops(1, country)
+
+        for country in self.player_2.countries_owned:
+            country.owner = self.player_2
+            self.player_2.set_new_troops(1, country)
+
+        player_1_countries = self.player_1.countries_owned
+        p1_index = 0
+        # Distribute troops randomly among countries owned
+        while self.player_1.n_new_troops > 0:
+            country = player_1_countries[p1_index]
+            self.player_1.set_new_troops(1, country)
+            p1_index += 1
+        
+        player_2_countries = self.player_2.countries_owned
+        p2_index = 0
+        # Distribute troops randomly among countries owned
+        while self.player_2.n_new_troops > 0:
+            country = player_2_countries[p2_index]
+            self.player_2.set_new_troops(1, country)
+            p2_index += 1
+
+
     def update_players_data(self):
 
         countries_data = self._create_countries_data()
@@ -529,11 +559,17 @@ def print_game_result(game: Game, total_time: int, path: str):
 
 if __name__ == '__main__':
     is_testing = False
+    fixed_start = False
     path = None
 
     args = sys.argv
     if len(args) == 2:
         path = args[1]
+        is_testing = True
+
+    elif len(args) == 3:
+        fixed_start = bool(int(args[1]))
+        path = args[2]
         is_testing = True
 
     start_time = time.time()
@@ -545,12 +581,23 @@ if __name__ == '__main__':
     game.create_command_files()
     #print("Criou os command files")
 
-    game.random_draft()
+    if fixed_start:
+        game.fixed_draft()
+    else:
+        game.random_draft()
     #print("Distribuiu os paises")
 
     game._distribute_new_troops(game.active_player)
 
     game._update_continents_owners()
+
+    # for country in game.player_1.countries_owned:
+    #     print(country.name, ':', country.n_troops)
+
+    # print('\n')
+
+    # for country in game.player_2.countries_owned:
+    #     print(country.name, ':', country.n_troops)
 
     game.update_players_data()
     #print("Atualizou os dados dos player")

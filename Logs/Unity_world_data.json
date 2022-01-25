@@ -1,9 +1,194 @@
 {
     "countries": [
         {
-            "name": "Madagascar",
+            "name": "Alaska",
             "owner": 1,
-            "n_troops": 1
+            "n_troops": 2
+        },
+        {
+            "name": "Alberta",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Ontario",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Western America",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Eastern America",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Quebec",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Central America",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Greenland",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Northwest America",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Brazil",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Venezuela",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Peru",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Argentina",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Western Australia",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Eastern Australia",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Indoneasia",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Papua New Guinea",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Ukraine",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Skandinavia",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Iceland",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Great Britain",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Northern Europe",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Western Europe",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Southern Europe",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Yakutsk",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Siberia",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Kamchatka",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Irkutsk",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Ural",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Japan",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Mongolia",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "China",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Middle East",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "India",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Siam",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "Afganistan",
+            "owner": 2,
+            "n_troops": 2
+        },
+        {
+            "name": "Congo",
+            "owner": 1,
+            "n_troops": 2
+        },
+        {
+            "name": "East Africa",
+            "owner": 2,
+            "n_troops": 2
         },
         {
             "name": "Egypt",
@@ -11,202 +196,17 @@
             "n_troops": 1
         },
         {
-            "name": "Afganistan",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Eastern Australia",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Western America",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Iceland",
-            "owner": 1,
-            "n_troops": 10
-        },
-        {
-            "name": "South Africa",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Argentina",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Papua New Guinea",
-            "owner": 1,
-            "n_troops": 9
-        },
-        {
-            "name": "Western Europe",
-            "owner": 1,
-            "n_troops": 3
-        },
-        {
-            "name": "Mongolia",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Peru",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Skandinavia",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Ontario",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "China",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Brazil",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "East Africa",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Japan",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Great Britain",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Alaska",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Venezuela",
-            "owner": 1,
-            "n_troops": 1
-        },
-        {
-            "name": "Congo",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Alberta",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Kamchatka",
-            "owner": 2,
-            "n_troops": 10
-        },
-        {
-            "name": "Central America",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Yakutsk",
-            "owner": 2,
-            "n_troops": 2
-        },
-        {
-            "name": "Southern Europe",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Indoneasia",
+            "name": "Madagascar",
             "owner": 2,
             "n_troops": 1
         },
         {
             "name": "North Africa",
-            "owner": 2,
-            "n_troops": 2
-        },
-        {
-            "name": "Middle East",
-            "owner": 2,
+            "owner": 1,
             "n_troops": 1
         },
         {
-            "name": "Siam",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Eastern America",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "India",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Irkutsk",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Quebec",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Western Australia",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Northern Europe",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Ukraine",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Ural",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Siberia",
-            "owner": 2,
-            "n_troops": 9
-        },
-        {
-            "name": "Northwest America",
-            "owner": 2,
-            "n_troops": 1
-        },
-        {
-            "name": "Greenland",
+            "name": "South Africa",
             "owner": 2,
             "n_troops": 1
         }

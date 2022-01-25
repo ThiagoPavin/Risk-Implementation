@@ -1,4 +1,19 @@
+rem Monte Carlo fixed start simulation
 :loop
+	start "agent1" /min python Risk-Agents\monte_carlo_agent.py 1
+	start "agent2" /min python Risk-Agents\cluster_based_agent.py 2
+	timeout 1
+	start "game" /min python game.py 1 montecarlo_fixed_vs_cluster.txt
+	
+	timeout 20
+
+	taskkill /FI "WindowTitle eq agent1*" /T /F
+	taskkill /FI "WindowTitle eq agent2*" /T /F
+	taskkill /FI "WindowTitle eq game*" /T /F
+goto loop
+
+rem Monte Carlo simulation
+:loop1
 	start "agent1" /min python Risk-Agents\monte_carlo_agent.py 1
 	start "agent2" /min python Risk-Agents\cluster_based_agent.py 2
 	timeout 1
@@ -9,7 +24,7 @@
 	taskkill /FI "WindowTitle eq agent1*" /T /F
 	taskkill /FI "WindowTitle eq agent2*" /T /F
 	taskkill /FI "WindowTitle eq game*" /T /F
-goto loop
+goto loop1
 
 FOR /L %%i in (0,1,35) DO (
 	start "agent1" /min python Risk-Agents\monte_carlo_agent.py 1
